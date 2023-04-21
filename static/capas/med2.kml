@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="med2" id="med2">
+	<SimpleField name="Punto" type="float"></SimpleField>
+	<SimpleField name="Fecha" type="string"></SimpleField>
+	<SimpleField name="Hora" type="string"></SimpleField>
+	<SimpleField name="Dirección" type="string"></SimpleField>
+	<SimpleField name="Latitud" type="float"></SimpleField>
+	<SimpleField name="Longitud" type="float"></SimpleField>
+	<SimpleField name="Valor" type="float"></SimpleField>
+	<SimpleField name="Localizaci" type="string"></SimpleField>
+	<SimpleField name="Visión_di" type="string"></SimpleField>
+	<SimpleField name="Tipo_de_Te" type="string"></SimpleField>
+	<SimpleField name="Conjunto" type="float"></SimpleField>
+	<SimpleField name="F12" type="string"></SimpleField>
+	<SimpleField name="F13" type="string"></SimpleField>
+	<SimpleField name="F14" type="string"></SimpleField>
+	<SimpleField name="F15" type="string"></SimpleField>
+	<SimpleField name="F16" type="string"></SimpleField>
+	<SimpleField name="F17" type="string"></SimpleField>
+	<SimpleField name="F18" type="string"></SimpleField>
+	<SimpleField name="F19" type="string"></SimpleField>
+	<SimpleField name="F20" type="string"></SimpleField>
+	<SimpleField name="F21" type="string"></SimpleField>
+	<SimpleField name="F22" type="string"></SimpleField>
+	<SimpleField name="F23" type="string"></SimpleField>
+	<SimpleField name="F24" type="string"></SimpleField>
+</Schema>
+<Folder><name>med2</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">5.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Camino de la Virgen de la Cabeza, 8 (Centro de salud)</SimpleData>
+		<SimpleData name="Latitud">40.55025600000</SimpleData>
+		<SimpleData name="Longitud">-3.32974000000</SimpleData>
+		<SimpleData name="Valor">0.07000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/tqjLQrbGJL62</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32974000000002,40.550256,0.0700000000069849</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">6.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Calle Estación, 29-31 (Ayuntamiento)</SimpleData>
+		<SimpleData name="Latitud">40.55245400000</SimpleData>
+		<SimpleData name="Longitud">-3.32545500000</SimpleData>
+		<SimpleData name="Valor">0.38000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/svYoaCtFabq</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32545499999998,40.5524540000001,0.380000000004657</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">17.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. de la Unión Europea, 55</SimpleData>
+		<SimpleData name="Latitud">40.54557700000</SimpleData>
+		<SimpleData name="Longitud">-3.33913500000</SimpleData>
+		<SimpleData name="Valor">0.11000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/fRFg8kF7rSS2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33913499999994,40.5455770000001,0.110000000000582</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">19.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. de la Unión Europea, 37</SimpleData>
+		<SimpleData name="Latitud">40.54956700000</SimpleData>
+		<SimpleData name="Longitud">-3.33948000000</SimpleData>
+		<SimpleData name="Valor">0.14000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/8p2A56ztuYP2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33947999999998,40.5495670000001,0.139999999999418</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">21.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/24</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Ctra. de Camarma, 4</SimpleData>
+		<SimpleData name="Latitud">40.55132700000</SimpleData>
+		<SimpleData name="Longitud">-3.33751700000</SimpleData>
+		<SimpleData name="Valor">0.08000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/fVyifcJrR5K2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33751699999999,40.5513270000001,0.0800000000017462</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">27.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Camino del Olivo con Ctra. de Alcalá</SimpleData>
+		<SimpleData name="Latitud">40.54481600000</SimpleData>
+		<SimpleData name="Longitud">-3.33396300000</SimpleData>
+		<SimpleData name="Valor">0.16000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/fMfBdk2kw732</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33396299999993,40.544816,0.160000000003492</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">28.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Ctra. de Alcalá Henares, 49V</SimpleData>
+		<SimpleData name="Latitud">40.54268200000</SimpleData>
+		<SimpleData name="Longitud">-3.33417200000</SimpleData>
+		<SimpleData name="Valor">0.15000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/YiNPZ9nRvt22</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33417200000002,40.542682,0.149999999994179</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">32.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Camino del Olivo con C/ Pinar</SimpleData>
+		<SimpleData name="Latitud">40.54707700000</SimpleData>
+		<SimpleData name="Longitud">-3.32733100000</SimpleData>
+		<SimpleData name="Valor">0.19000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/eG2vEGCrtfA2</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32733100000002,40.547077,0.190000000002328</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">34.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Camino del Olivo con Paseo del Sol</SimpleData>
+		<SimpleData name="Latitud">40.54894000000</SimpleData>
+		<SimpleData name="Longitud">-3.32352400000</SimpleData>
+		<SimpleData name="Valor">0.10000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/Fxz2p9pTMCQ2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32352399999996,40.5489400000001,0.100000000005821</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">41.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/24</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Carretera de Alcalá, 1</SimpleData>
+		<SimpleData name="Latitud">40.54785900000</SimpleData>
+		<SimpleData name="Longitud">-3.33359200000</SimpleData>
+		<SimpleData name="Valor">0.11000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/Lv4sHCkhXNu</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33359199999995,40.5478590000001,0.110000000000582</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">42.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Carretera de Camarma, 1</SimpleData>
+		<SimpleData name="Latitud">40.55013100000</SimpleData>
+		<SimpleData name="Longitud">-3.33369200000</SimpleData>
+		<SimpleData name="Valor">0.08000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/nq3RHMcLej32</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33369199999999,40.5501310000001,0.0800000000017462</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">46.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. de la Unión Europea con C/ Reino Unido</SimpleData>
+		<SimpleData name="Latitud">40.55276500000</SimpleData>
+		<SimpleData name="Longitud">-3.33729600000</SimpleData>
+		<SimpleData name="Valor">0.14000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/QxH5H9y1aQ42</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33729599999992,40.5527650000001,0.139999999999418</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">50.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Travesía del Fresno con C/ Fuente de Arriba</SimpleData>
+		<SimpleData name="Latitud">40.55416100000</SimpleData>
+		<SimpleData name="Longitud">-3.33156500000</SimpleData>
+		<SimpleData name="Valor">0.16000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/ctaGQjUFSfL2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33156500000001,40.5541610000001,0.160000000003492</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">54.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/24</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Plaza de la Constitución</SimpleData>
+		<SimpleData name="Latitud">40.55393900000</SimpleData>
+		<SimpleData name="Longitud">-3.32879700000</SimpleData>
+		<SimpleData name="Valor">0.09000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/PtBA3pJuoSR2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32879699999989,40.5539390000001,0.0899999999965075</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">59.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ de las Eras con Camino de Villaviciosa</SimpleData>
+		<SimpleData name="Latitud">40.55646700000</SimpleData>
+		<SimpleData name="Longitud">-3.32873700000</SimpleData>
+		<SimpleData name="Valor">0.04000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/awtugjB4PNo</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32873699999999,40.5564669999999,0.0399999999935972</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med2">
+		<SimpleData name="Punto">64.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Camino del Cristo con Camino Villanueva</SimpleData>
+		<SimpleData name="Latitud">40.55685500000</SimpleData>
+		<SimpleData name="Longitud">-3.32030400000</SimpleData>
+		<SimpleData name="Valor">0.45000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/miXXgt4n1r62</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">2.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32030399999991,40.5568550000001,0.44999999999709</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

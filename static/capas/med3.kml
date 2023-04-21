@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="med3" id="med3">
+	<SimpleField name="Punto" type="float"></SimpleField>
+	<SimpleField name="Fecha" type="string"></SimpleField>
+	<SimpleField name="Hora" type="string"></SimpleField>
+	<SimpleField name="Dirección" type="string"></SimpleField>
+	<SimpleField name="Latitud" type="float"></SimpleField>
+	<SimpleField name="Longitud" type="float"></SimpleField>
+	<SimpleField name="Valor" type="float"></SimpleField>
+	<SimpleField name="Localizaci" type="string"></SimpleField>
+	<SimpleField name="Visión_di" type="string"></SimpleField>
+	<SimpleField name="Tipo_de_Te" type="string"></SimpleField>
+	<SimpleField name="Conjunto" type="float"></SimpleField>
+	<SimpleField name="F12" type="string"></SimpleField>
+	<SimpleField name="F13" type="string"></SimpleField>
+	<SimpleField name="F14" type="string"></SimpleField>
+	<SimpleField name="F15" type="string"></SimpleField>
+	<SimpleField name="F16" type="string"></SimpleField>
+	<SimpleField name="F17" type="string"></SimpleField>
+	<SimpleField name="F18" type="string"></SimpleField>
+	<SimpleField name="F19" type="string"></SimpleField>
+	<SimpleField name="F20" type="string"></SimpleField>
+	<SimpleField name="F21" type="string"></SimpleField>
+	<SimpleField name="F22" type="string"></SimpleField>
+	<SimpleField name="F23" type="string"></SimpleField>
+	<SimpleField name="F24" type="string"></SimpleField>
+</Schema>
+<Folder><name>med3</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">2.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Paseo del Sol (Colegio Público Gloria Fuertes)</SimpleData>
+		<SimpleData name="Latitud">40.55077300000</SimpleData>
+		<SimpleData name="Longitud">-3.32477600000</SimpleData>
+		<SimpleData name="Valor">0.51000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/YTXBAbifFmS2</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32477599999999,40.5507730000001,0.509999999994761</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">4.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/05</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ Acueducto, 534</SimpleData>
+		<SimpleData name="Latitud">40.54762700000</SimpleData>
+		<SimpleData name="Longitud">-3.32258000000</SimpleData>
+		<SimpleData name="Valor">0.15000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/QgPceb3WwBC2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32258000000002,40.547627,0.149999999994179</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">11.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/05</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ Acueducto con C/ Siete Picos</SimpleData>
+		<SimpleData name="Latitud">40.54417200000</SimpleData>
+		<SimpleData name="Longitud">-3.32838000000</SimpleData>
+		<SimpleData name="Valor">0.23000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/9Vda5nxKmJG2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32837999999993,40.544172,0.229999999995925</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">14.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/05</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Ctra. de Alcalá con C/ Acueducto</SimpleData>
+		<SimpleData name="Latitud">40.54120600000</SimpleData>
+		<SimpleData name="Longitud">-3.33420600000</SimpleData>
+		<SimpleData name="Valor">0.66000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/dDXgktL9bHz</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.334206,40.5412060000001,0.660000000003492</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">16.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. de la Unión Europea con C/ Chipre</SimpleData>
+		<SimpleData name="Latitud">40.54424300000</SimpleData>
+		<SimpleData name="Longitud">-3.33867500000</SimpleData>
+		<SimpleData name="Valor">0.10000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/9HDPgymkzkN2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33867499999997,40.544243,0.100000000005821</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">18.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Av. de la Unión Europea con C/ Tratado de Roma</SimpleData>
+		<SimpleData name="Latitud">40.54758000000</SimpleData>
+		<SimpleData name="Longitud">-3.33938500000</SimpleData>
+		<SimpleData name="Valor">0.19000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/KZoRrZ6qNhz</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33938499999994,40.54758,0.190000000002328</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">20.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Av. de la Unión Europea con Ctra. de Camarma</SimpleData>
+		<SimpleData name="Latitud">40.55135100000</SimpleData>
+		<SimpleData name="Longitud">-3.33880900000</SimpleData>
+		<SimpleData name="Valor">0.12000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/ZEmyGmPH4BJ2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33880899999997,40.551351,0.119999999995343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">24.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/24</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. de Madrid con C/ Alemania</SimpleData>
+		<SimpleData name="Latitud">40.54580300000</SimpleData>
+		<SimpleData name="Longitud">-3.33552300000</SimpleData>
+		<SimpleData name="Valor">0.10000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/GLPaSHERuck</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33552299999997,40.5458029999999,0.100000000005821</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">29.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ Greco con C/ Eduardo Chillida</SimpleData>
+		<SimpleData name="Latitud">40.54684000000</SimpleData>
+		<SimpleData name="Longitud">-3.33311700000</SimpleData>
+		<SimpleData name="Valor">0.13000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/pZo2ahug4M92</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33311700000002,40.5468399999999,0.130000000004657</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">39.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Camino de la Virgen de la Cabeza con C/ Eduardo Chillída</SimpleData>
+		<SimpleData name="Latitud">40.54917100000</SimpleData>
+		<SimpleData name="Longitud">-3.33045300000</SimpleData>
+		<SimpleData name="Valor">0.12000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/yEbSPrD2cNJ2</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33045299999998,40.5491710000001,0.119999999995343</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">43.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/17</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Carretera de Camarma con C/ Mármol</SimpleData>
+		<SimpleData name="Latitud">40.55094400000</SimpleData>
+		<SimpleData name="Longitud">-3.33156000000</SimpleData>
+		<SimpleData name="Valor">0.07000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/bswGTEPaLj12</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33155999999997,40.5509440000001,0.0700000000069849</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">47.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Rotonda Ctra. de Alcalá con Av. de la Unión Europea</SimpleData>
+		<SimpleData name="Latitud">40.55498600000</SimpleData>
+		<SimpleData name="Longitud">-3.33459400000</SimpleData>
+		<SimpleData name="Valor">0.10000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/cfYLUz9xASo</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33459399999992,40.554986,0.100000000005821</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">53.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Plaza de Ramón y Cajal</SimpleData>
+		<SimpleData name="Latitud">40.55508400000</SimpleData>
+		<SimpleData name="Longitud">-3.32745700000</SimpleData>
+		<SimpleData name="Valor">0.06000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/vFvJyCBxed82</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32745699999987,40.5550840000001,0.0599999999976717</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">58.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/18</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">Av. Cervantes con C/ Vicente Espinel</SimpleData>
+		<SimpleData name="Latitud">40.55765500000</SimpleData>
+		<SimpleData name="Longitud">-3.32991900000</SimpleData>
+		<SimpleData name="Valor">0.06000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/dYBM11VG4632</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32991900000002,40.557655,0.0599999999976717</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">65.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/19</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ Rio Tajo con C/ Arroyo de las Monjas</SimpleData>
+		<SimpleData name="Latitud">40.55585000000</SimpleData>
+		<SimpleData name="Longitud">-3.31813000000</SimpleData>
+		<SimpleData name="Valor">0.34000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/15Qir1aqCMr</SimpleData>
+		<SimpleData name="Visión_di">No</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.31813,40.5558500000001,0.339999999996508</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#med3">
+		<SimpleData name="Punto">67.00000000000</SimpleData>
+		<SimpleData name="Fecha">2017/04/24</SimpleData>
+		<SimpleData name="Hora">1899/12/30</SimpleData>
+		<SimpleData name="Dirección">C/ de la Bribona con C/ de la Valdelacueva</SimpleData>
+		<SimpleData name="Latitud">40.55382300000</SimpleData>
+		<SimpleData name="Longitud">-3.32145900000</SimpleData>
+		<SimpleData name="Valor">1.22000000000</SimpleData>
+		<SimpleData name="Localizaci">https://goo.gl/maps/aagG7yhrWc92</SimpleData>
+		<SimpleData name="Visión_di">Sí</SimpleData>
+		<SimpleData name="Tipo_de_Te">Urbano</SimpleData>
+		<SimpleData name="Conjunto">3.00000000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.321459,40.553823,1.22000000000116</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

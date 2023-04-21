@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Antenas_Meco" id="Antenas_Meco">
+	<SimpleField name="Numero" type="float"></SimpleField>
+	<SimpleField name="UTM_Y" type="float"></SimpleField>
+	<SimpleField name="UTM_X" type="float"></SimpleField>
+	<SimpleField name="Descripcio" type="string"></SimpleField>
+</Schema>
+<Folder><name>Antenas_Meco</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">1.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.54058900000</SimpleData>
+		<SimpleData name="UTM_X">-3.38320000000</SimpleData>
+		<SimpleData name="Descripcio">CR ALCALA, S/N. CAMARMA DE ESTERUELAS, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.38319999999993,40.540589</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">2.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55187500000</SimpleData>
+		<SimpleData name="UTM_X">-3.37049400000</SimpleData>
+		<SimpleData name="Descripcio">VP POLIGONO 1 PARCELA 3175, S/N. CAMARMA DE ESTERUELAS, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.37049399999995,40.551875</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">3.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.51495300000</SimpleData>
+		<SimpleData name="UTM_X">-3.37451400000</SimpleData>
+		<SimpleData name="Descripcio">P VEREDA CAMARMA A PUENTE ZULEMA (A-2/M-119), S/N. ALCALA DE HENARES, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.37451399999998,40.514953</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">4.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.51843100000</SimpleData>
+		<SimpleData name="UTM_X">-3.34326700000</SimpleData>
+		<SimpleData name="Descripcio">AV PUNTO COM, 23. ALCALÁ DE HENARES, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.34326699999997,40.518431</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">5.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.53348900000</SimpleData>
+		<SimpleData name="UTM_X">-3.32089200000</SimpleData>
+		<SimpleData name="Descripcio">VP POL. IND. R2 MECO, NAVE INDITEX ( UMTS-900 ), S/N. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32089199999996,40.533489</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">6.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.54162200000</SimpleData>
+		<SimpleData name="UTM_X">-3.31344200000</SimpleData>
+		<SimpleData name="Descripcio">CR ESTACION, 30. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.31344199999995,40.541622</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">7.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.53551100000</SimpleData>
+		<SimpleData name="UTM_X">-3.29624200000</SimpleData>
+		<SimpleData name="Descripcio">CL CALERA, 14. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.29624199999995,40.535511</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">8.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.52403100000</SimpleData>
+		<SimpleData name="UTM_X">-3.29103900000</SimpleData>
+		<SimpleData name="Descripcio">CR Carretera Madrid-Barcelona N II, KM 38.2. ALCALÁ DE HENARES, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.29103899999996,40.5240310000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">9.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.54229400000</SimpleData>
+		<SimpleData name="UTM_X">-3.27866700000</SimpleData>
+		<SimpleData name="Descripcio">CL TEJIDO, 5. AZUQUECA DE HENARES, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.27866699999998,40.542294</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">10.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.54551900000</SimpleData>
+		<SimpleData name="UTM_X">-3.28406100000</SimpleData>
+		<SimpleData name="Descripcio">CL PINTURA_4_POLG_MIRALCAMPO_PAARC.85_GERDINSA, 4. AZUQUECA DE HENARES</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.28406100000001,40.5455190000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">11.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55141700000</SimpleData>
+		<SimpleData name="UTM_X">-3.26963900000</SimpleData>
+		<SimpleData name="Descripcio">CL ALUMINIO, 12. AZUQUECA DE HENARES, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.26963899999998,40.5514170000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">12.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55566700000</SimpleData>
+		<SimpleData name="UTM_X">-3.27800300000</SimpleData>
+		<SimpleData name="Descripcio">AV ALCALA, 18 (D). AZUQUECA DE HENARES, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.27800299999996,40.555667</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">13.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55507500000</SimpleData>
+		<SimpleData name="UTM_X">-3.29320800000</SimpleData>
+		<SimpleData name="Descripcio">VP POLIGONO 5 PARCELA 20080 EL MAR, S/N. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.29320799999999,40.5550750000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">14.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.58117200000</SimpleData>
+		<SimpleData name="UTM_X">-3.30729700000</SimpleData>
+		<SimpleData name="Descripcio">LG CAMARMA_9_PRADO_P.1_PARC.5079. VILLANUEVA DE LA TORRE, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.30729700000001,40.581172</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">15.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55601400000</SimpleData>
+		<SimpleData name="UTM_X">-3.33233300000</SimpleData>
+		<SimpleData name="Descripcio">CL LOPE DE RUEDA, 22, 22. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.33233300000001,40.556014</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">16.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55513100000</SimpleData>
+		<SimpleData name="UTM_X">-3.32159700000</SimpleData>
+		<SimpleData name="Descripcio">CL DE LA BRINONA, 17. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32159699999994,40.5551310000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">17.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.55319200000</SimpleData>
+		<SimpleData name="UTM_X">-3.32245300000</SimpleData>
+		<SimpleData name="Descripcio">CM DE AZUQUECA ( UMTS-900 ), 3. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.322453,40.5531920000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">18.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.54979400000</SimpleData>
+		<SimpleData name="UTM_X">-3.32389400000</SimpleData>
+		<SimpleData name="Descripcio">PS SOL, 4. MECO, MADRID</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.32389399999994,40.5497940000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">19.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.57842500000</SimpleData>
+		<SimpleData name="UTM_X">-3.27576700000</SimpleData>
+		<SimpleData name="Descripcio">VP LA_DEHESA_P._1__PARC._38.A, S/N. AZUQUECA DE HENARES, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.27576699999997,40.5784250000001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Antenas_Meco">
+		<SimpleData name="Numero">20.00000000000</SimpleData>
+		<SimpleData name="UTM_Y">40.58088900000</SimpleData>
+		<SimpleData name="UTM_X">-3.27269700000</SimpleData>
+		<SimpleData name="Descripcio">VP LA_DEHESA_P._1__PARC._38.A, S/N. AZUQUECA DE HENARES, GUADALAJARA</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-3.27269699999994,40.5808890000001</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
