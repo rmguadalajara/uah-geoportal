@@ -601,3 +601,28 @@ a:hover, a:focus {
 }
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+.map {
+	margin-top: 0%;
+	height: 760px;
+	width: 98%;
+}
+
+header {
+	margin-bottom: 0%;
+	background-color: #0166b1;
+	color: white;
+	/* Si se desea cambiar el color del texto */
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	background-color: antiquewhite;
+}
+
+.ol-switcher .ol-switcher-item {
+	width: 630px;
+}

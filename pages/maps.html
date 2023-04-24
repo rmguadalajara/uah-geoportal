@@ -13,47 +13,24 @@
 	<meta name="author" content="" />
 
 	<title>Representación de mapas ArcGIS</title>
-
+	<link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
 	<!-- bootstrap core css -->
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
 
 	<!-- fonts style -->
-	<link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- Custom styles for this template -->
 	<link href="../static/css/style.css" rel="stylesheet" />
 	<!-- responsive style -->
 	<link href="../static/css/responsive.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+	<!-- open layer -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
-	
+	<!-- layer switcher -->
+	<link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
+	<!--Side bar-->
+	<link rel="stylesheet" href="../static/css/leaflet-sidebar.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<style>
-		.map {
-			margin-top: 0%;
-			height: 760px;
-			width: 98%;
-		}
 
-		header {
-			margin-bottom: 0%;
-			background-color: #0166b1;
-			color: white;
-			/* Si se desea cambiar el color del texto */
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		body {
-			background-color: antiquewhite;
-		}
-
-		.ol-switcher .ol-switcher-item {
-			width: 630px;
-		}
-	</style>
-	<!-- FIN PRUEBA INTEGRACIÓN MAPAS REFACTORIZAS -->
 
 </head>
 
@@ -62,15 +39,11 @@
 		<!-- header section strats -->
 		<header class="header_section">
 			<div class="container-fluid">
-				<nav class="navbar navbar-expand-lg custom_nav-container ">
+				<nav class="navbar navbar-expand-lg custom_nav-container " style="z-index: 0;">
 					<a class="navbar-brand" href="/"> <img href="../../static/images/logo_uah.png" alt=""> <span>
 							REPRESENTACIÓN DE MAPAS ARCGIS </span>
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
-						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
@@ -83,9 +56,6 @@
 								<li class="nav-item"><a class="nav-link" href="contact.html">Contacto
 									</a></li>
 							</ul>
-							<form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-							</form>
 						</div>
 					</div>
 				</nav>
@@ -95,9 +65,137 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
-	</div>
 
+
+		<!--Sidebar-->
+		<div id="sidebar" class="sidebar collapsed">
+			<div class="sidebar-tabs">
+				<ul role="tablist">
+					<li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+					<li><a href="#profile" role="tab"><i class="fa fa-book"></i></a></li>
+					<li><a href="#profile2" role="tab"><i class="fa fa-download"></i></a></li>
+					<li><a href="mailto:rsg.group@uah.es?Subject=Cuestionario%20desde%20web%20map" role="tab"> <i
+								class="fa fa-envelope"></i></a></li>
+					<li><a href="https://github.com/RsgGroupUAH" role="tab" target="_blank"><i
+								class="fa fa-github"></i></a></li>
+				</ul>
+				<ul role="tablist">
+					<li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+				</ul>
+			</div>
+			<!-- Tab panes -->
+			<div class="sidebar-content" style="text-align: justify;">
+				<div class="sidebar-pane" id="home">
+					<h1 class="sidebar-header">
+						Presentación
+						<span class="sidebar-close"><i class="fa fa-caret-right"></i></span>
+					</h1>
+					<img class="lorem">
+					Hola! 👋
+					<br>
+					Bienvenid@s al visor web oficial del grupo de investigación en radiación y sensores de la
+					Universidad de Alcalá. En el podrás visualizar toda la información geoespacial empleada en las
+					investigaciones sobre contaminación electromagnética, realizadas desde el año 2017, hasta la
+					actualidad en el municipio madrileño de Meco.
+					Os dejamos el link a las publicaciones vinculadas a estos datos:
+					-
+					Esperamos que toda esta información os sea de utilidad.
+					Cualquier duda no dudeís en contactar con nosotros a través del correo electrónico habilitado más
+					abajo.
+					<br><br><br>
+					🇺🇸
+					Hello! 👋
+					<br>
+					Welcome to the official web viewer of the radiation and sensor research group of the University of
+					Alcalá. In it you will be able to view all the geospatial information used in the investigations on
+					electromagnetic pollution carried out from the year 2017 to the present in the Madrid municipality
+					of Meco.
+					We leave you the link to the publications linked to this data:
+					-
+					We hope that all this information is useful to you.
+					Any questions do not hesitate to contact us through the email enabled below.
+
+					<br><br><br>
+					<img src="../static/images/cutrephoto.png"></img>
+				</div>
+				<div class="sidebar-pane" id="profile">
+					<h1 class="sidebar-header">Sobre el proyecto<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+					<br>
+					<h1>Proyecto METEX-5G</h1>
+					<p>El principal objetivo del proyecto es desarrollar una metodología de medida que permita
+						caracterizar la variación
+						de la exposición personal, temporal y espacial de la contaminación electromagnética.</p>
+					<br>
+					<h1>🇺🇸 METEX-5G Project</h1>
+					<p>The main objective of the project is to develop a measurement methodology that allows to
+						characterize the variation
+						of personal, temporal and spatial exposure to electromagnetic pollution.</p>
+				</div>
+				<div class="sidebar-pane" id="profile2">
+					<h1 class="sidebar-header">Descargas<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+					<br>
+
+					<p>En este apartado es posible descargar las capas que conforman el geovisor, esperamos que os sean
+						de utilidad. </p>
+
+					<p>🇺🇸 In this section it is possible to download the layers that make up the geovisor, we hope you
+						find them useful.</p>
+					<a href="../static/capas/med1.kml">
+						<button>Campaña de medidas 1</button>
+					</a>
+					<br>
+					<a href="../static/capas/med2.kml">
+						<button>Campaña de medidas 2</button>
+					</a>
+					<br>
+					<a href="../static/capas/med3.kml">
+						<button>Campaña de medidas 3</button>
+					</a>
+					<br>
+					<a href="../static/capas/med4.kml">
+						<button>Campaña de medidas 4</button>
+					</a>
+					<br>
+					<a href="../static/capas/med5.kml">
+						<button>Campaña de medidas 5</button>
+					</a>
+					<br>
+					<a href="../static/capas/med6.kml">
+						<button>Campaña de medidas 6</button>
+					</a>
+				</div>
+			</div>
+			<div class="grid-container">
+				<div class="header">
+					<img src="#" alt=""
+						style="width: inherit; height: inherit; vertical-align: middle;">
+				</div>
+				<div class="sidebar-pane" id="messages">
+					<h1 class="sidebar-header">Messages<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+				</div>
+				<div class="sidebar-pane" id="settings">
+					<h1 class="sidebar-header">Settings<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--End of side bar-->
+
+	</div>
+	<!--openlayer-->
+	<script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+	<!-- layer switcher-->
+	<script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
+	<!-- sidebar-->
+	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	<script src="../static/js/leaflet.js"></script>
+	<!-- main script -->
 	<script src="../static/js/maps.js"></script>
+
 
 </body>
 
