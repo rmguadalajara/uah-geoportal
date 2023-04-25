@@ -44,7 +44,6 @@
 							REPRESENTACIÓN DE MAPAS ARCGIS</span>
 					</a>
 
-
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  ">
@@ -65,7 +64,32 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
+		<div id="measure" class="ol-measure">
+			<div class="ol-measure-label">Medidas:</div>
+			<ul class="ol-measure-list"></ul>
+		</div>
 
+		<!-- <form class="form-inline">
+			<label>Geometry type &nbsp;</label>
+			<select id="type">
+				<option value="length">Length</option>
+				<option value="area">Area</option>
+			</select>
+			<label class="checkbox"><input type="checkbox" id="geodesic" />use geodesic measures</label>
+		</form> -->
+		<form>
+			<label for="type">Measurement type &nbsp;</label>
+			<select id="type">
+				<option value="LineString">Length (LineString)</option>
+				<option value="Polygon">Area (Polygon)</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="segments">Show segment lengths:&nbsp;</label>
+			<input type="checkbox" id="segments" checked />
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="clear">Clear previous measure:&nbsp;</label>
+			<input type="checkbox" id="clear" checked />
+		</form>
 
 		<!--Sidebar-->
 		<div id="sidebar" class="sidebar collapsed">
@@ -169,8 +193,7 @@
 			</div>
 			<div class="grid-container">
 				<div class="header">
-					<img src="#" alt=""
-						style="width: inherit; height: inherit; vertical-align: middle;">
+					<img src="#" alt="" style="width: inherit; height: inherit; vertical-align: middle;">
 				</div>
 				<div class="sidebar-pane" id="messages">
 					<h1 class="sidebar-header">Messages<span class="sidebar-close"><i
@@ -185,7 +208,10 @@
 	</div>
 	<!--End of side bar-->
 
+
+
 	</div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<!--openlayer-->
 	<script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
 	<!-- layer switcher-->
@@ -195,7 +221,9 @@
 	<script src="../static/js/leaflet.js"></script>
 	<!-- main script -->
 	<script src="../static/js/maps.js"></script>
-
+	<script src="../static/js/map-measures.js"></script>
+	<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>-->
 
 </body>
 
