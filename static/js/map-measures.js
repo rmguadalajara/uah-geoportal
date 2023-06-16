@@ -241,9 +241,26 @@ typeSelect.onchange = function () {
   addInteraction();
 };
 
-addInteraction();
+
 
 showSegments.onchange = function () {
   vector.changed();
   draw.getOverlay().changed();
+};
+
+const checkbox = document.getElementById('active')
+
+checkbox.addEventListener('change', (event) => {
+  if (event.currentTarget.checked) {
+    addInteraction();
+  } else {
+    map.removeInteraction(draw); 
+  }
+});
+
+function eraseMeasurements(){
+  var features = vector.getSource().getFeatures();
+  features.forEach((feature) => {
+    vector.getSource().removeFeature(feature);
+  });
 };

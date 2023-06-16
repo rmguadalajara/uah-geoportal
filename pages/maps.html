@@ -64,32 +64,7 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
-		<div id="measure" class="ol-measure">
-			<div class="ol-measure-label">Medidas:</div>
-			<ul class="ol-measure-list"></ul>
-		</div>
-
-		<!-- <form class="form-inline">
-			<label>Geometry type &nbsp;</label>
-			<select id="type">
-				<option value="length">Length</option>
-				<option value="area">Area</option>
-			</select>
-			<label class="checkbox"><input type="checkbox" id="geodesic" />use geodesic measures</label>
-		</form> -->
-		<form>
-			<label for="type">Measurement type &nbsp;</label>
-			<select id="type">
-				<option value="LineString">Length (LineString)</option>
-				<option value="Polygon">Area (Polygon)</option>
-			</select>
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<label for="segments">Show segment lengths:&nbsp;</label>
-			<input type="checkbox" id="segments" checked />
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			<label for="clear">Clear previous measure:&nbsp;</label>
-			<input type="checkbox" id="clear" checked />
-		</form>
+		
 
 		<!--Sidebar-->
 		<div id="sidebar" class="sidebar collapsed">
@@ -98,6 +73,7 @@
 					<li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
 					<li><a href="#profile" role="tab"><i class="fa fa-book"></i></a></li>
 					<li><a href="#profile2" role="tab"><i class="fa fa-download"></i></a></li>
+					<li><a href="#measures" role="tab"><i class="fa fa-crosshairs"></i></a></li>
 					<li><a href="mailto:rsg.group@uah.es?Subject=Cuestionario%20desde%20web%20map" role="tab"> <i
 								class="fa fa-envelope"></i></a></li>
 					<li><a href="https://github.com/RsgGroupUAH" role="tab" target="_blank"><i
@@ -190,6 +166,46 @@
 						<button>Campaña de medidas 6</button>
 					</a>
 				</div>
+				<div class="sidebar-pane" id="measures">
+					<h1 class="sidebar-header">Medidas<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+					<br>
+
+					<p>En este apartado es posible realizar medidas tanto lineales como poligonales sobre el mapa,
+						la medida entre puntos se hace utilizando el método geodésico</p>
+
+					<p>This section allows you to take both linear and polygonal measurements on the map.
+						The measurement between points is done using the geodesic method.</p>
+					<div id="measure" class="ol-measure">
+						<div class="ol-measure-label">Medidas:</div>
+						<ul class="ol-measure-list"></ul>
+						<div id="info">&nbsp;</div>
+					</div>
+
+					<form>
+						<div>
+							<label for="type">Tipo de medida</label>
+							<select id="type">
+								<option value="LineString">Longitud (línea recta)</option>
+								<option value="Polygon">Área (Polígono)</option>
+							</select>
+						</div>
+						<div>
+							<label for="segments">Mostrar longitud de segmentos</label>
+							<input type="checkbox" id="segments" checked />
+						</div>
+						<div>
+							<label for="clear">Limpiar medidas anteriorres</label>
+							<input type="checkbox" id="clear" checked />
+						</div>
+						<div>
+							<label for="active">Habilitar medidas</label>
+							<input type="checkbox" id="active" />
+						</div>
+
+						<input type="button" onclick="eraseMeasurements()" id="erase" value="Borrar medidas" />
+					</form>
+				</div>
 			</div>
 			<div class="grid-container">
 				<div class="header">
@@ -220,8 +236,8 @@
 	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 	<script src="../static/js/leaflet.js"></script>
 	<!-- main script -->
-	<script src="../static/js/maps.js"></script>
-	<script src="../static/js/map-measures.js"></script>
+	<script type="module" src="../static/js/maps.js"></script>
+	<!--<script src="../static/js/map-measures.js"></script>-->
 	<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>-->
 
