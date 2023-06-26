@@ -24,6 +24,8 @@
 	<link href="../static/css/responsive.css" rel="stylesheet" />
 	<!-- open layer -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+	<!-- open layer EXT -->
+	<link rel="stylesheet" href="../static/css/ol-ext.css">
 	<!-- layer switcher -->
 	<link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
 	<!--Side bar-->
@@ -64,8 +66,25 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
-
-
+		<div id="position-container" class="position-container">
+			<div>Latitud / Longitud del puntero</div>
+			<div id="mouse-position"></div>
+			<div>
+				<form>
+					<label for="projection">Proyección para cálculos coordenadas </label>
+					<select id="projection">
+						<option value="EPSG:4326">EPSG:4326</option>
+						<option value="EPSG:3857">EPSG:3857</option>
+					</select>
+				</form>
+			</div>
+			<div>
+				<form>
+					<label for="precision">Precisión cálculo coordenadas</label>
+					<input id="precision" type="number" min="0" max="12" value="4" />
+				</form>
+			</div>
+		</div>
 		<!--Sidebar-->
 		<div id="sidebar" class="sidebar collapsed">
 			<div class="sidebar-tabs">
@@ -264,6 +283,8 @@
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<!--openlayer-->
 	<script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+	<!--openlayer-EXT-->
+	<script src="../static/js/ol-ext.js"></script>
 	<!-- layer switcher-->
 	<script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
 	<!-- sidebar-->

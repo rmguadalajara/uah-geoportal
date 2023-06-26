@@ -658,3 +658,12 @@ body {
   .tooltip-static:before {
 	border-top-color: #ffcc33;
   }
+
+  .position-container{
+	display: inline-grid;
+	justify-content: center;
+	background-color: rgba(255,255, 255, 0.6);
+  }
+  .position-container div{
+	border: 1px solid #3e4753;
+  }
