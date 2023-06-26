@@ -1,3 +1,5 @@
+import { map } from "./map-layers.js";
+
 const typeSelect = document.getElementById('type');
 const showSegments = document.getElementById('segments');
 const clearPrevious = document.getElementById('clear');
@@ -9,7 +11,7 @@ const style = new  ol.style.Style({
   stroke: new ol.style.Stroke({
     color: 'rgba(0, 0, 0, 0.5)',
     lineDash: [10, 10],
-    width: 2,
+    width: 4,
   }),
   image: new ol.style.Circle({
     radius: 5,
@@ -182,7 +184,8 @@ function styleFunction(feature, segments, drawType, tip) {
     tip &&
     type === 'Point' &&
     !modify.getOverlay().getSource().getFeatures().length
-  ) {
+  ) 
+  {
     tipPoint = geometry;
     tipStyle.getText().setText(tip);
     styles.push(tipStyle);
@@ -201,7 +204,7 @@ map.addLayer(vector);
 
 map.addInteraction(modify);
 
-let draw; // global so we can remove it later
+let measure; // global so we can remove it later
 
 function addInteraction() {
   const drawType = typeSelect.value;
@@ -210,21 +213,21 @@ function addInteraction() {
     (drawType === 'Polygon' ? 'polygon' : 'line');
   const idleTip = 'Click to start measuring';
   let tip = idleTip;
-  draw = new ol.interaction.Draw({
+  measure = new ol.interaction.Draw({
     source: source,
     type: drawType,
     style: function (feature) {
       return styleFunction(feature, showSegments.checked, drawType, tip);
     },
   });
-  draw.on('drawstart', function () {
+  measure.on('drawstart', function () {
     if (clearPrevious.checked) {
       source.clear();
     }
     modify.setActive(false);
     tip = activeTip;
   });
-  draw.on('drawend', function () {
+  measure.on('drawend', function () {
     modifyStyle.setGeometry(tipPoint);
     modify.setActive(true);
     map.once('pointermove', function () {
@@ -233,11 +236,11 @@ function addInteraction() {
     tip = idleTip;
   });
   modify.setActive(true);
-  map.addInteraction(draw);
+  map.addInteraction(measure);
 }
 
 typeSelect.onchange = function () {
-  map.removeInteraction(draw);
+  map.removeInteraction(measure);
   addInteraction();
 };
 
@@ -245,7 +248,7 @@ typeSelect.onchange = function () {
 
 showSegments.onchange = function () {
   vector.changed();
-  draw.getOverlay().changed();
+  measure.getOverlay().changed();
 };
 
 const checkbox = document.getElementById('active')
@@ -254,11 +257,13 @@ checkbox.addEventListener('change', (event) => {
   if (event.currentTarget.checked) {
     addInteraction();
   } else {
-    map.removeInteraction(draw); 
+    map.removeInteraction(measure); 
   }
 });
 
-function eraseMeasurements(){
+document.getElementById ("erase").addEventListener ("click", eraseFeatures, false);
+
+function eraseFeatures(){
   var features = vector.getSource().getFeatures();
   features.forEach((feature) => {
     vector.getSource().removeFeature(feature);

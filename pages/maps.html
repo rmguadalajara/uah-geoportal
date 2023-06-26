@@ -12,7 +12,7 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 
-	<title>Representación de mapas ArcGIS</title>
+	<title>GeoPortal grupo Radiación </title>
 	<link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
 	<!-- bootstrap core css -->
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
@@ -41,7 +41,7 @@
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg custom_nav-container " style="z-index: 0;">
 					<a class="navbar-brand" href="/"> <img href="../../static/images/logo_uah.png" alt=""> <span>
-							REPRESENTACIÓN DE MAPAS ARCGIS</span>
+							GeoPortal grupo Radiación</span>
 					</a>
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -64,7 +64,7 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
-		
+
 
 		<!--Sidebar-->
 		<div id="sidebar" class="sidebar collapsed">
@@ -74,6 +74,7 @@
 					<li><a href="#profile" role="tab"><i class="fa fa-book"></i></a></li>
 					<li><a href="#profile2" role="tab"><i class="fa fa-download"></i></a></li>
 					<li><a href="#measures" role="tab"><i class="fa fa-crosshairs"></i></a></li>
+					<li><a href="#drawings" role="tab"><i class="fa fa-pencil"></i></a></li>
 					<li><a href="mailto:rsg.group@uah.es?Subject=Cuestionario%20desde%20web%20map" role="tab"> <i
 								class="fa fa-envelope"></i></a></li>
 					<li><a href="https://github.com/RsgGroupUAH" role="tab" target="_blank"><i
@@ -203,7 +204,40 @@
 							<input type="checkbox" id="active" />
 						</div>
 
-						<input type="button" onclick="eraseMeasurements()" id="erase" value="Borrar medidas" />
+						<input type="button" id="erase" value="Borrar medidas" />
+					</form>
+				</div>
+				<div class="sidebar-pane" id="drawings">
+
+					<h1 class="sidebar-header">Dibujos<span class="sidebar-close"><i
+								class="fa fa-caret-right"></i></span></h1>
+					<br>
+
+					<p>En este apartado es posible realizar dibujos poligonales sobre el mapa</p>
+
+					<p>In this section, it is possible to create polygonal drawings on the map.</p>
+
+					<form>
+
+						<label for="drawType">Tipo de dibujo &nbsp;</label>
+						<select id="drawType">
+							<option value="Point">Punto</option>
+							<option value="LineString">Linea</option>
+							<option value="Polygon">Polígono</option>
+							<option value="Circle">Círculo</option>
+						</select>
+
+						<div>
+							<label for="active">Mano alzada</label>
+							<input type="checkbox" id="freeHand" />
+						</div>
+
+						<div>
+							<label for="active">Habilitar dibujos</label>
+							<input type="checkbox" id="activeDrawing" />
+						</div>
+
+						<input type="button" id="eraseDrawings" value="Borrar Dibujos" />
 					</form>
 				</div>
 			</div>
@@ -236,10 +270,13 @@
 	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 	<script src="../static/js/leaflet.js"></script>
 	<!-- main script -->
-	<script type="module" src="../static/js/maps.js"></script>
-	<!--<script src="../static/js/map-measures.js"></script>-->
+	<script type="module" src="../static/js/map-layers.js"></script>
+	<script type="module" src="../static/js/map-controls.js"></script>
+	<script type="module" src="../static/js/map-measures.js"></script>
+	<script type="module" src="../static/js/map-drawing.js"></script>
 	<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
+
 
 </body>
 
