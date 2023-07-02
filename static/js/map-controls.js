@@ -86,4 +86,4 @@ const precisionInput = document.getElementById('precision');
 precisionInput.addEventListener('change', function (event) {
   const format = ol.coordinate.createStringXY(event.target.valueAsNumber);
   mousePositionControl.setCoordinateFormat(format);
-});
+}); 

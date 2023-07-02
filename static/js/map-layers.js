@@ -274,13 +274,16 @@ const medrur7 = new ol.layer.Vector({
 
 
 //se declara capa de tipo raster con origen en imagen tif
-const rasterLayer = new ol.layer.Image({
+/* const rasterLayer = new ol.layer.Image({
   source: new ol.source.ImageStatic({
+    title: 'NEW RASTER',
     url: '../static/capas/int_conj2.tif', // Reemplace 'ruta/al/archivo.tif' con la URL de su archivo TIF.
-    projection: 'EPSG:4326', // Reemplace 'EPSG:4326' con el código de proyección de su archivo TIF.
-    imageExtent: [-100, -50, 100, 50] // Especifique el rango de coordenadas de su archivo TIF.
+    projection: 'EPSG:25830', // Reemplace 'EPSG:4326' con el código de proyección de su archivo TIF.
+    imageExtent: [471142.0985000000218861,4487822.0552000002935529, 473150.5985000000218861,4490156.5552000002935529] // Especifique el rango de coordenadas de su archivo TIF.
   })
-});
+}); */
+
+
 
 //Se declara capa vectorial con la malla para el muestreo
 const malla = new ol.layer.Vector({
@@ -297,6 +300,40 @@ const malla = new ol.layer.Vector({
   },
 });
 
+
+
+const geoServerWMSITiledLayers =
+  new ol.layer.Tile({
+    title: 'raster tiled',
+    source: new ol.source.TileWMS({
+      url: 'http://localhost:8080/geoserver/uah/wms',
+      params: { 'layers': 'uah:int_conj2' },
+      serverType: 'geoserver',
+      transition: 0,
+    }),
+  });
+
+const geoServerWMSImageLayers =
+  new ol.layer.Image({
+    title: 'raster image',
+    source: new ol.source.ImageWMS({
+      extent: [-13884991, 2870341, -7455066, 6338219],
+      url: 'http://localhost:8080/geoserver/uah/wms',
+      params: { 'LAYERS': 'uah:int_conj2' },
+      serverType: 'geoserver',
+      ratio: 1,
+    }),
+  });
+
+const opacityInput = document.getElementById('opacity-input');
+const opacityOutput = document.getElementById('opacity-output');
+function update() {
+  const opacity = parseFloat(opacityInput.value);
+  geoServerWMSITiledLayers.setOpacity(opacity);
+  opacityOutput.innerText = opacity.toFixed(2);
+}
+opacityInput.addEventListener('input', update);
+update();
 
 //SE declara mapa con tres Tiles, y se le añaden las capas declaradas anterioremente
 export const map = new ol.Map({
@@ -323,15 +360,20 @@ export const map = new ol.Map({
             url: 'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}'
           })
         }),
+
+
       ]
     }),
-    antenas, limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
+    geoServerWMSImageLayers, geoServerWMSITiledLayers, antenas, limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
   ],
   view: new ol.View({
     center: ol.proj.fromLonLat([-3.329501, 40.551952]),
+
     zoom: 14,
   }),
 });
+
+
 
 //Tooltips
 

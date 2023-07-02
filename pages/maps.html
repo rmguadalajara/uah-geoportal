@@ -66,6 +66,11 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
+		<label>
+			Layer opacity
+			<input id="opacity-input" type="range" min="0" max="1" step="0.01" value="1" />
+			<span id="opacity-output"></span>
+		</label>
 		<div id="position-container" class="position-container">
 			<div>Latitud / Longitud del puntero</div>
 			<div id="mouse-position"></div>
@@ -295,8 +300,15 @@
 	<script type="module" src="../static/js/map-controls.js"></script>
 	<script type="module" src="../static/js/map-measures.js"></script>
 	<script type="module" src="../static/js/map-drawing.js"></script>
+	<script src="../static/js/plotty.min.js"></script>
+	<!-- <script type="module" src="../static/js/map-raster.js"></script> -->
 	<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
 	<script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/geotiff@2.0.7/dist-browser/geotiff.js"></script>
+	<!-- <script src="../static/js/geotiff.js"></script> -->
+	<!-- <script src="https://cdn.rawgit.com/seikichi/tiff.js/master/tiff.min.js"></script> -->
+
+
 
 
 </body>
