@@ -300,36 +300,31 @@ const malla = new ol.layer.Vector({
   },
 });
 
+//*Se declara fuente de imagen WMS para capa raster desde geoserver
+const wmsImageSource = new ol.source.ImageWMS({
+  extent: [-13884991, 2870341, -7455066, 6338219],
+  url: 'http://localhost:8080/geoserver/uah/wms',
+  params: { 'LAYERS': 'uah:int_conj2' },
+  serverType: 'geoserver',
+  ratio: 1,
 
+  
+});
 
-const geoServerWMSITiledLayers =
-  new ol.layer.Tile({
-    title: 'raster tiled',
-    source: new ol.source.TileWMS({
-      url: 'http://localhost:8080/geoserver/uah/wms',
-      params: { 'layers': 'uah:int_conj2' },
-      serverType: 'geoserver',
-      transition: 0,
-    }),
-  });
-
+//Se declara capa raster de tipo imagen WMS con origen desde el source de geoserver
 const geoServerWMSImageLayers =
   new ol.layer.Image({
     title: 'raster image',
-    source: new ol.source.ImageWMS({
-      extent: [-13884991, 2870341, -7455066, 6338219],
-      url: 'http://localhost:8080/geoserver/uah/wms',
-      params: { 'LAYERS': 'uah:int_conj2' },
-      serverType: 'geoserver',
-      ratio: 1,
-    }),
+    source: wmsImageSource,
+    crossOrigin: 'anonymous',
   });
 
+//Control de opacidad de capa raster
 const opacityInput = document.getElementById('opacity-input');
 const opacityOutput = document.getElementById('opacity-output');
 function update() {
   const opacity = parseFloat(opacityInput.value);
-  geoServerWMSITiledLayers.setOpacity(opacity);
+  geoServerWMSImageLayers.setOpacity(opacity);
   opacityOutput.innerText = opacity.toFixed(2);
 }
 opacityInput.addEventListener('input', update);
@@ -364,7 +359,7 @@ export const map = new ol.Map({
 
       ]
     }),
-    geoServerWMSImageLayers, geoServerWMSITiledLayers, antenas, limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
+    geoServerWMSImageLayers, antenas, limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
   ],
   view: new ol.View({
     center: ol.proj.fromLonLat([-3.329501, 40.551952]),
@@ -373,6 +368,32 @@ export const map = new ol.Map({
   }),
 });
 
+map.on('singleclick', function (evt) {
+  document.getElementById('info').innerHTML = '';
+  const viewResolution = (map.getView().getResolution());
+  const url = wmsImageSource.getFeatureInfoUrl(
+    evt.coordinate,
+    viewResolution,
+    'EPSG:3857',
+    { 'INFO_FORMAT': 'text/html' }
+  );
+  if (url) {
+    fetch(url)
+      .then((response) => response.text())
+      .then((html) => {
+        document.getElementById('info').innerHTML = html;
+      });
+  }
+});
+
+map.on('pointermove', function (evt) {
+  if (evt.dragging) {
+    return;
+  }
+  const data = geoServerWMSImageLayers.getData(evt.pixel);
+  const hit = data && data[3] > 0; // transparent pixels have zero for data[3]
+  map.getTargetElement().style.cursor = hit ? 'pointer' : '';
+});
 
 
 //Tooltips

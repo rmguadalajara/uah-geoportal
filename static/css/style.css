@@ -667,3 +667,7 @@ body {
   .position-container div{
 	border: 1px solid #3e4753;
   }
+  .value_layer{
+	display: inline-flex;
+	width: auto;
+  }
