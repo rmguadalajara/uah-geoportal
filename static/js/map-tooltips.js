@@ -1,4 +1,4 @@
-import { map } from "./map-layers.js";
+import { map,medrur1, medrur2, medrur3, medrur4, medrur5, medrur6,antenas } from "./map-layers.js";
 
 //Tooltips
 
@@ -32,7 +32,7 @@ var selectMeasure = new ol.interaction.Select({
     template: {
       title:
         function (f) {
-          return getPopupTittle(f);//aqui se va a meter el texto
+          return 'MEDIDA: ' + getPopupTittle(f);//aqui se va a meter el texto
         },
       attributes:
       {
@@ -58,7 +58,7 @@ var selectMeasure = new ol.interaction.Select({
     template: {
       title:
         function (f) {
-          return getPopupTittle(f);//aqui se va a meter el texto del titulo
+          return 'ANTENA: ' + getPopupTittle(f);//aqui se va a meter el texto del titulo
         },
       attributes:
       {

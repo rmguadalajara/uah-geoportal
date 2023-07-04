@@ -104,7 +104,7 @@ const StyleLimiteUrbano = new ol.style.Style({
 });
 
 //se declara capa de anteenas a partir de fichero kml y estilo declarado anteriormente
-const antenas = new ol.layer.Vector({
+export const antenas = new ol.layer.Vector({
   title: "Antenas",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -122,7 +122,7 @@ const antenas = new ol.layer.Vector({
 });
 
 //se declara capa de limites municipales a partir de fichero kml y estilo declarado anteriormente
-const limitmun = new ol.layer.Vector({
+export const limitmun = new ol.layer.Vector({
   title: "Límites Muncipales",
   source: new ol.source.Vector({
     url: "../static/capas/Limites_Mun_Meco.kml",
@@ -136,7 +136,7 @@ const limitmun = new ol.layer.Vector({
 });
 
 //se declara capa de limite urbano a partir de fichero kml y estilo declarado anteriormente
-const limiturb = new ol.layer.Vector({
+export const limiturb = new ol.layer.Vector({
   title: "Límites Urbanos",
   source: new ol.source.Vector({
     url: "../static/capas/Limites_Urbs_Meco.kml",
@@ -150,7 +150,7 @@ const limiturb = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas1 a partir de fichero kml y estilo declarado anteriormente
-const medrur1 = new ol.layer.Vector({
+export const medrur1 = new ol.layer.Vector({
   title: "Conjunto de Medidas 1",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -168,7 +168,7 @@ const medrur1 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas2 a partir de fichero kml y estilo declarado anteriormente
-const medrur2 = new ol.layer.Vector({
+export const medrur2 = new ol.layer.Vector({
   title: "Conjunto de Medidas 2",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -186,7 +186,7 @@ const medrur2 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas3 a partir de fichero kml y estilo declarado anteriormente
-const medrur3 = new ol.layer.Vector({
+export const medrur3 = new ol.layer.Vector({
   title: "Conjunto de Medidas 3",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -204,7 +204,7 @@ const medrur3 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas4 a partir de fichero kml y estilo declarado anteriormente
-const medrur4 = new ol.layer.Vector({
+export const medrur4 = new ol.layer.Vector({
   title: "Conjunto de Medidas 4",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -222,7 +222,7 @@ const medrur4 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas5 a partir de fichero kml y estilo declarado anteriormente
-const medrur5 = new ol.layer.Vector({
+export const medrur5 = new ol.layer.Vector({
   title: "Conjunto de Medidas 5",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -240,7 +240,7 @@ const medrur5 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas6 a partir de fichero kml y estilo declarado anteriormente
-const medrur6 = new ol.layer.Vector({
+export const medrur6 = new ol.layer.Vector({
   title: "Conjunto de Medidas 6",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -258,7 +258,7 @@ const medrur6 = new ol.layer.Vector({
 });
 
 //se declara capa de conjunto de medidas7 a partir de fichero kml y estilo declarado anteriormente
-const medrur7 = new ol.layer.Vector({
+export const medrur7 = new ol.layer.Vector({
   title: "Conjunto de Medidas 7",
   source: new ol.source.Cluster({
     distance: distanceInput,
@@ -274,7 +274,7 @@ const medrur7 = new ol.layer.Vector({
 
 
 //Se declara capa vectorial con la malla para el muestreo
-const malla = new ol.layer.Vector({
+export const malla = new ol.layer.Vector({
   title: "Malla de Muestreo Urbana",
   source: new ol.source.Vector({
     url: "../static/capas/Malla_muestreo.kml",
@@ -300,7 +300,7 @@ const wmsImageSource = new ol.source.ImageWMS({
 });
 
 //Se declara capa raster de tipo imagen WMS con origen desde el source de geoserver
-const geoServerWMSImageLayers =
+export const geoServerWMSImageLayers =
   new ol.layer.Image({
     title: 'Raster conjunto medidas 2',
     source: wmsImageSource,
