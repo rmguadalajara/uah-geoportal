@@ -273,18 +273,6 @@ const medrur7 = new ol.layer.Vector({
 });
 
 
-//se declara capa de tipo raster con origen en imagen tif
-/* const rasterLayer = new ol.layer.Image({
-  source: new ol.source.ImageStatic({
-    title: 'NEW RASTER',
-    url: '../static/capas/int_conj2.tif', // Reemplace 'ruta/al/archivo.tif' con la URL de su archivo TIF.
-    projection: 'EPSG:25830', // Reemplace 'EPSG:4326' con el código de proyección de su archivo TIF.
-    imageExtent: [471142.0985000000218861,4487822.0552000002935529, 473150.5985000000218861,4490156.5552000002935529] // Especifique el rango de coordenadas de su archivo TIF.
-  })
-}); */
-
-
-
 //Se declara capa vectorial con la malla para el muestreo
 const malla = new ol.layer.Vector({
   title: "Malla de Muestreo Urbana",
@@ -303,7 +291,7 @@ const malla = new ol.layer.Vector({
 //*Se declara fuente de imagen WMS para capa raster desde geoserver
 const wmsImageSource = new ol.source.ImageWMS({
   extent: [-13884991, 2870341, -7455066, 6338219],
-  url: 'http://localhost:8080/geoserver/uah/wms',
+  url: 'http://localhost/geoserver/uah/wms',
   params: { 'LAYERS': 'uah:int_conj2' },
   serverType: 'geoserver',
   ratio: 1,
@@ -314,21 +302,11 @@ const wmsImageSource = new ol.source.ImageWMS({
 //Se declara capa raster de tipo imagen WMS con origen desde el source de geoserver
 const geoServerWMSImageLayers =
   new ol.layer.Image({
-    title: 'raster image',
+    title: 'Raster conjunto medidas 2',
     source: wmsImageSource,
     crossOrigin: 'anonymous',
   });
 
-//Control de opacidad de capa raster
-const opacityInput = document.getElementById('opacity-input');
-const opacityOutput = document.getElementById('opacity-output');
-function update() {
-  const opacity = parseFloat(opacityInput.value);
-  geoServerWMSImageLayers.setOpacity(opacity);
-  opacityOutput.innerText = opacity.toFixed(2);
-}
-opacityInput.addEventListener('input', update);
-update();
 
 //SE declara mapa con tres Tiles, y se le añaden las capas declaradas anterioremente
 export const map = new ol.Map({
@@ -395,87 +373,3 @@ map.on('pointermove', function (evt) {
   map.getTargetElement().style.cursor = hit ? 'pointer' : '';
 });
 
-
-//Tooltips
-
-// se crea la feature select para capas de tipo medida
-var selectMeasure = new ol.interaction.Select({
-  hitTolerance: 5,
-  multi: true,
-  condition: ol.events.condition.singleClick,
-  layers: [medrur1, medrur2, medrur3, medrur4, medrur5, medrur6],
-});
-
-// se crea la feature select para capas de tipo antena
-var selectAntennas = new ol.interaction.Select({
-  hitTolerance: 5,
-  multi: true,
-  condition: ol.events.condition.singleClick,
-  layers: [antenas],
-});
-
-//Se añade interacción en el mapa a la feature select para elementos de tipo medida
-map.addInteraction(selectMeasure);
-
-//Se añade interacción en el mapa a la feature select para elementos de tipo antena
-map.addInteraction(selectAntennas);
-
-//Se configura e lcontrol de pop up para la select de tipo medida 
-let popupMeasures = new ol.Overlay.PopupFeature({
-  popupClass: 'default anim',
-  select: selectMeasure,
-  canFix: true,
-  template: {
-    title:
-      function (f) {
-        return getPopupTittle(f);//aqui se va a meter el texto
-      },
-    attributes:
-    {
-      'Fecha': { title: 'Fecha' },
-      'Dirección': { title: 'Dirección' },
-      'Latitud': { title: 'Latitud', after: 'º' },
-      'Longitud': { title: 'Longitud', after: 'º' },
-      'Valor': { title: 'Valor', after: ' V/m' },
-      'Localizaci': { title: 'Localización' },
-      'Visión_di': { title: 'Visión directa' },
-      'Tipo_de_Te': { title: 'Tipo de Terreno' },
-      'Conjunto': { title: 'Conjunto' },
-    }
-  }
-});
-map.addOverlay(popupMeasures);
-
-//Se configura e lcontrol de pop up para la select de tipo antena
-let popupAntennas = new ol.Overlay.PopupFeature({
-  popupClass: 'default anim',
-  select: selectAntennas,
-  canFix: true,
-  template: {
-    title:
-      function (f) {
-        return getPopupTittle(f);//aqui se va a meter el texto del titulo
-      },
-    attributes:
-    {
-      'Numero': { title: 'Numero' },
-      'UTM_X': { title: 'Latitud', after: 'º' },
-      'UTM_Y': { title: 'Longitud', after: 'º' },
-
-    }
-  }
-});
-map.addOverlay(popupAntennas);
-
-function getPopupTittle(f) {
-
-  if (f.getProperties().features[0].values_.Descripcio != undefined) {
-    f.values_ = f.getProperties().features[0].values_;
-    return f.values_.Descripcio;
-  } else {
-    f.values_ = f.getProperties().features[0].values_;
-    return f.values_.Dirección
-  }
-
-
-}

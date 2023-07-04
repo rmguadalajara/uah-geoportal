@@ -18505,12 +18505,12 @@ ol.control.WMSCapabilities = class olcontrolWMSCapabilities extends ol.control.B
   getCapabilities(url, options) {
     if (!url)
       return
-    if (!this.testUrl(url)) {
+   /*  if (!this.testUrl(url)) {
       this.showError({
         type: 'badUrl'
       })
       return
-    }
+    } */
     options = options || {}
     // Extract map attributes
     url = url.split('?')

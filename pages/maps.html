@@ -27,7 +27,7 @@
 	<!-- open layer EXT -->
 	<link rel="stylesheet" href="../static/css/ol-ext.css">
 	<!-- layer switcher -->
-	<link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/ol-layerswitcher@4.1.1/dist/ol-layerswitcher.css" /> -->
 	<!--Side bar-->
 	<link rel="stylesheet" href="../static/css/leaflet-sidebar.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -66,11 +66,6 @@
 	</div>
 	<div id="imprimible">
 		<div id="map" class="map"></div>
-		<label>
-			Layer opacity
-			<input id="opacity-input" type="range" min="0" max="1" step="0.01" value="1" />
-			<span id="opacity-output"></span>
-		</label>
 		<div id="position-container" class="position-container">
 			<div>Latitud / Longitud del puntero</div>
 			<div id="mouse-position"></div>
@@ -78,15 +73,9 @@
 				<form>
 					<label for="projection">Proyección para cálculos coordenadas </label>
 					<select id="projection">
-						<option value="EPSG:4326">EPSG:4326</option>
 						<option value="EPSG:3857">EPSG:3857</option>
+						<option value="EPSG:4326">EPSG:4326</option>
 					</select>
-				</form>
-			</div>
-			<div>
-				<form>
-					<label for="precision">Precisión cálculo coordenadas</label>
-					<input id="precision" type="number" min="0" max="12" value="4" />
 				</form>
 			</div>
 		</div>
@@ -94,6 +83,7 @@
 			<label for="info">Valor capa</label>
 			<div id="info"> &nbsp;</div>
 		</div>
+
 		<!--Sidebar-->
 		<div id="sidebar" class="sidebar collapsed">
 			<div class="sidebar-tabs">
@@ -295,22 +285,23 @@
 	<!--openlayer-EXT-->
 	<script src="../static/js/ol-ext.js"></script>
 	<!-- layer switcher-->
-	<script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script>
+	<!-- <script src="https://unpkg.com/ol-layerswitcher@4.1.1"></script> -->
 	<!-- sidebar-->
 	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 	<script src="../static/js/leaflet.js"></script>
+	<!--proj4-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.14/proj4.js"></script>
 	<!-- main script -->
 	<script type="module" src="../static/js/map-layers.js"></script>
 	<script type="module" src="../static/js/map-controls.js"></script>
 	<script type="module" src="../static/js/map-measures.js"></script>
 	<script type="module" src="../static/js/map-drawing.js"></script>
-	<script src="../static/js/plotty.min.js"></script>
-	<!-- <script type="module" src="../static/js/map-raster.js"></script> -->
+	<script type="module" src="../static/js/map-wms-control.js"></script>
+
 	<!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
 	<script src="https://cdn.jsdelivr.net/npm/elm-pep@1.0.6/dist/elm-pep.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/geotiff@2.0.7/dist-browser/geotiff.js"></script>
-	<!-- <script src="../static/js/geotiff.js"></script> -->
-	<!-- <script src="https://cdn.rawgit.com/seikichi/tiff.js/master/tiff.min.js"></script> -->
+
 
 
 

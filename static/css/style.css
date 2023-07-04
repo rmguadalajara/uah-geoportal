@@ -671,3 +671,7 @@ body {
 	display: inline-flex;
 	width: auto;
   }
+
+  .ol-wmscapabilities ul {
+	padding: 0;
+  }

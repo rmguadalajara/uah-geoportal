@@ -8,31 +8,7 @@ var sidebar = L.control.sidebar("sidebar", {
 //Se añade barra lateral al mapa
 sidebar.addTo(map);
 
-//SE declara layer switcher para cambiar de capa dinamicamente
-const layerSwitcher = new LayerSwitcher({
-  reverse: true,
-  groupSelectStyle: 'group'
-});
-
-//Se añade el layer switcher al maapa
-map.addControl(layerSwitcher);
-
-//SE muestra el panel de layer switcher
-layerSwitcher.showPanel();
-
-//Logica de control de cambio de capa
-function toggleLayer(eve) {
-  const lyrname = eve.target.value;
-  const checkedStatus = eve.target.checked;
-  const lyrList = map.getLayers();
-
-  lyrList.forEach(function (element) {
-    if (lyrname == element.get('title')) {
-      element.setVisible(checkedStatus);
-    }
-  });
-}
-
+ 
 //SE declara linea de escala
 const scale = new ol.control.ScaleLine({
 });
@@ -67,7 +43,7 @@ const mouseStyle = new ol.style.Style({
 //SE declara elemento de posicion del raton
 const mousePos = new ol.control.MousePosition({
   coordinateFormat: ol.coordinate.createStringXY(4),
-  projection: 'EPSG:4326',
+  projection: 'EPSG:3857',
   // comment the following two lines to have the mouse position
   // be placed within the map.
   className: 'custom-mouse-position',
@@ -79,11 +55,5 @@ map.addControl(mousePos)
 
 const projectionSelect = document.getElementById('projection');
 projectionSelect.addEventListener('change', function (event) {
-  mousePositionControl.setProjection(event.target.value);
+  mousePos.setProjection(event.target.value);
 });
-
-const precisionInput = document.getElementById('precision');
-precisionInput.addEventListener('change', function (event) {
-  const format = ol.coordinate.createStringXY(event.target.valueAsNumber);
-  mousePositionControl.setCoordinateFormat(format);
-}); 
