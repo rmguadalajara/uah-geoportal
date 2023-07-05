@@ -3870,3 +3870,7 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	margin-left: -35px;
 	position: absolute;
 }
+
+.map{
+	height: 650px;
+}

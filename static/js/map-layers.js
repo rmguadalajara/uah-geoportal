@@ -9,7 +9,7 @@ const iconStyle = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/ante2.png',
+    src: 'static/images/ante2.png',
   }),
 });
 
@@ -19,7 +19,7 @@ const iconStyleRural1 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icorural.png',
+    src: 'static/images/icoPoints/icorural.png',
   }),
 });
 
@@ -29,7 +29,7 @@ const iconStyleRural2 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icorural6.png',
+    src: 'static/images/icoPoints/icorural6.png',
   }),
 });
 
@@ -39,7 +39,7 @@ const iconStyleUr1 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icour1.png',
+    src: 'static/images/icoPoints/icour1.png',
   }),
 });
 
@@ -49,7 +49,7 @@ const iconStyleUr2 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icour2.png',
+    src: 'static/images/icoPoints/icour2.png',
   }),
 });
 
@@ -59,7 +59,7 @@ const iconStyleUr3 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icour3.png',
+    src: 'static/images/icoPoints/icour3.png',
   }),
 });
 
@@ -69,7 +69,7 @@ const iconStyleUr4 = new ol.style.Style({
     anchor: [0.5, 30],
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
-    src: '../static/images/icoPoints/icour4.png',
+    src: 'static/images/icoPoints/icour4.png',
   }),
 });
 
@@ -110,7 +110,7 @@ export const antenas = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/Antenas_Meco.kml",
+      url: "static/capas/Antenas_Meco.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -125,7 +125,7 @@ export const antenas = new ol.layer.Vector({
 export const limitmun = new ol.layer.Vector({
   title: "Límites Muncipales",
   source: new ol.source.Vector({
-    url: "../static/capas/Limites_Mun_Meco.kml",
+    url: "static/capas/Limites_Mun_Meco.kml",
     format: new ol.format.KML({
       extractStyles: false,
     }),
@@ -139,7 +139,7 @@ export const limitmun = new ol.layer.Vector({
 export const limiturb = new ol.layer.Vector({
   title: "Límites Urbanos",
   source: new ol.source.Vector({
-    url: "../static/capas/Limites_Urbs_Meco.kml",
+    url: "static/capas/Limites_Urbs_Meco.kml",
     format: new ol.format.KML({
       extractStyles: false,
     }),
@@ -156,7 +156,7 @@ export const medrur1 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med1.kml",
+      url: "static/capas/med1.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -174,7 +174,7 @@ export const medrur2 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med2.kml",
+      url: "static/capas/med2.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -192,7 +192,7 @@ export const medrur3 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med3.kml",
+      url: "static/capas/med3.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -210,7 +210,7 @@ export const medrur4 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med4.kml",
+      url: "static/capas/med4.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -228,7 +228,7 @@ export const medrur5 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med5.kml",
+      url: "static/capas/med5.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -246,7 +246,7 @@ export const medrur6 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med6.kml",
+      url: "static/capas/med6.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -264,7 +264,7 @@ export const medrur7 = new ol.layer.Vector({
     distance: distanceInput,
     minDistance: mindistanceInput,
     source: new ol.source.Vector({
-      url: "../static/capas/med7.kml",
+      url: "static/capas/med7.kml",
       format: new ol.format.KML({
         extractStyles: false,
       }),
@@ -277,7 +277,7 @@ export const medrur7 = new ol.layer.Vector({
 export const malla = new ol.layer.Vector({
   title: "Malla de Muestreo Urbana",
   source: new ol.source.Vector({
-    url: "../static/capas/Malla_muestreo.kml",
+    url: "static/capas/Malla_muestreo.kml",
     format: new ol.format.KML({
       extractStyles: false,
     }),
