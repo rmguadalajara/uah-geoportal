@@ -359,7 +359,10 @@ map.on('singleclick', function (evt) {
     fetch(url)
       .then((response) => response.text())
       .then((html) => {
-        document.getElementById('info').innerHTML = html;
+        if(!html.includes('Not Found')){
+            document.getElementById('info').innerHTML = html;
+        }
+        
       });
   }
 });
