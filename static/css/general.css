@@ -130,6 +130,7 @@ h4, .h4 {
 }
 .yamm .container {
 	position:relative;
+	/* overflow: hidden; */
 }
 .yamm .dropdown.yamm-fw .dropdown-menu {
 	left:15px;
