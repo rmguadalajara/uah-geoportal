@@ -29,6 +29,7 @@ var selectMeasure = new ol.interaction.Select({
     popupClass: 'default anim',
     select: selectMeasure,
     canFix: true,
+    closeBox: true,
     template: {
       title:
         function (f) {
@@ -55,6 +56,7 @@ var selectMeasure = new ol.interaction.Select({
     popupClass: 'default anim',
     select: selectAntennas,
     canFix: true,
+    closeBox: true,
     template: {
       title:
         function (f) {
