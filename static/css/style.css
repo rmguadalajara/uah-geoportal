@@ -3874,3 +3874,24 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 .map{
 	height: 650px;
 }
+
+.position-container{
+	background: var(--ol-partial-background-color);
+    position: absolute;
+    border-radius: 4px;
+    bottom: 4em;
+    left: 2em;
+    padding: 2px;
+}
+.value_layer{
+	background: var(--ol-partial-background-color);
+    position: absolute;
+    border-radius: 4px;
+    bottom: 10em;
+    left: 2em;
+    padding: 2px;
+}
+
+.ol-popup-content h1{
+	text-transform: uppercase;
+}

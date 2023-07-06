@@ -1623,9 +1623,9 @@ body > .ol-ext-dialog > form {
 
 .ol-control.ol-layerswitcher {
   position: absolute;
-  right: 0.5em;
+  right: 3em;
   text-align: left;
-  top: 3em;
+  top: 0.5em;
   max-height: calc(100% - 6em);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4565,8 +4565,8 @@ ul.ol-legend li div {
 }
 
 .ol-control.ol-wmscapabilities {
-  top: .5em;
-  right: 2.5em;
+  top: 3em;
+  left: 3em;
 }
 .ol-touch .ol-control.ol-wmscapabilities {
   right: 3em;
@@ -5225,7 +5225,7 @@ ul.ol-legend li div {
 .ol-popup.ol-fixed {
   margin: 0!important;
   top: .5em!important;
-  right: .5em!important;
+  right: 6.5em!important;
   left: auto!important;
   bottom: auto!important;
   -webkit-transform: none!important;
