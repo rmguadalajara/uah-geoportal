@@ -3978,7 +3978,7 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	background: var(--ol-partial-background-color);
 	position: absolute;
 	border-radius: 4px;
-	bottom: 14.6em;
+	bottom: 19.6em;
 	left: 2em;
 	padding: 2px;
 }
@@ -3998,15 +3998,21 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	width: 100% !important;
 }
 
+
 .control-menu-button {
 	width: 55px !important;
 	height: 55px !important;
 }
 
+
 .ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button{
 	width: 55px !important;
 	height: 55px !important;
 }
+
+
+
+
 .ol-control.ol-wmscapabilities{
 	top: 0.5em !important;
 	right: 25em !important;
@@ -4035,4 +4041,101 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 
 .hidden{
 	display: none;
+}
+
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+   
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+
+@media screen and (max-width: 550px) {
+  
+	.control-menu-button{
+		width: 33px !important;
+		height: 33px !important;
+	}
+	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button {
+		width: 33px !important;
+		height: 33px !important;
+	}
+	.position-button{
+
+		right: 14em;;
+	}
+	.print-button{
+
+		right: 9em;
+	}
+	
+	.value-button{
+
+		right: 4em;
+	}
+	.ol-control.ol-wmscapabilities {
+		right: 18em !important;
+	}
+	.ol-control.ol-layerswitcher{
+		width: 23em !important;
+	}
+	.tituloInvestigacion{
+		font-size: 1.3em;;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
+  
+	.control-menu-button{
+		width: 22px !important;
+		height: 22px !important;
+	}
+	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button {
+		width: 22px !important;
+		height: 22px !important;
+	}
+
+	.position-button{
+
+		right: 9em;;
+	}
+	.print-button{
+
+		right: 6em;
+	}
+	
+	.value-button{
+
+		right: 3em;
+	}
+	.ol-control.ol-wmscapabilities {
+		right: 11em !important;
+	}
+	.ol-control.ol-layerswitcher{
+		width: 13em !important;
+	}
+	.tituloInvestigacion{
+		font-size: 0.9em;
+	}
 }
