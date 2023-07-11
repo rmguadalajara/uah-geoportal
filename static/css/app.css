@@ -2781,3 +2781,911 @@ img.img-circle {
    -ms-transform: scale(2) rotate(5deg);
    transform: scale(2) rotate(5deg);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.layerManager {
+	overflow-y: auto;
+    height: inherit;
+}*/
+
+div#layerCataloguePanel.tabcontent,
+div#visibleLayersPanel.tabcontent {
+
+	width: 100%;
+	overflow-y: auto;
+	/* max-height: 800px; */
+	/* height: 380px !important; */
+	margin-bottom: -16px;
+
+}
+
+div#layerAdministratorPanel div#layerCataloguePanel div.layerManager {
+	margin-bottom: -10.5rem;
+}
+
+.layerManager-container {
+	/* make sure layer-manager container doesnt overlap footer */
+	/* max-height: 50vh; */
+
+	list-style-type: none;
+	overflow-y: auto;
+	/* height: 500px; */
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.layerManager-container #noLayer_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 2rem 2rem;
+}
+
+.layerManager-header {
+	/*border-bottom: thin solid #ccc;*/
+	position: relative;
+	height: 2.3em;
+	padding: 0 .2em;
+	/*background-color: #E3E3E3;*/
+}
+
+.layerManager-header span {
+	display: inline-block;
+	padding: 0 1.8rem;
+}
+
+.layerManager-header .visible {
+	float: right;
+}
+
+.layerManager-entry,
+.layerManager-header,
+.layerManager-action,
+.layerManager-action-add,
+.layerManager-action-delete {
+	color: #464646;
+	line-height: 2.3em;
+	font-family: Arial;
+	/*font-family: opensansregular, 'arial', sans-serif;*/
+	font-weight: normal;
+	font-size: 1.3em;
+	list-style-type: none;
+}
+
+
+
+.layerManager-header {
+	color: #000;
+	font-weight: bold;
+}
+
+div.accordion.panel_head.external_group {
+	background-color: #D2A517;
+}
+
+div.accordion.panel_head {
+	font-family: Arial;
+	font-style: normal;
+	font-weight: bold;
+	margin-bottom: .25rem;
+}
+
+div.accordion.panel_head.subgroup {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+/* Start - Accordion arrow symbol creation 17/05/2021*/
+.accordion.panel_head:after {
+	content: '\003E';
+	transform: scaleY(2);
+	/*transform: rotate(90Deg) scaleY(2);*/
+	color: white;
+	font-weight: bold;
+	float: right;
+}
+
+.accordion.panel_head.expandedGroup:after {
+	transform: rotate(90Deg) scaleY(2);
+	padding: 0 0.6rem;
+}
+
+.accordion.panel_head.subgroup:after {
+	color: #004494;
+}
+
+/*.panel_body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+div.panel_body.subgroup {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}*/
+
+/* End - Accordion arrow symbol creation 17/05/2021*/
+
+/*.layerManager-entry {
+	color: #464646;
+	border-bottom: thin solid #ccc;
+}*/
+.move-layer-icon {
+	padding-left: 2rem !important;
+}
+
+li.layerManager-entry {
+	font-family: Arial;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0 0.5rem;
+	border-bottom: 1px solid #e3e3e3;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+li.layerManager-entry label.name {
+	max-width: 78%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#layerCataloguePanel li.layerManager-entry label.name {
+	width: 82%;
+}
+
+#layerCataloguePanel li.layerManager-entry i {
+	float: right;
+}
+
+li.layerManager-entry i {
+	color: #004494;
+	cursor: pointer;
+	padding-left: .5rem;
+}
+
+li.layerManager-entry i.noClicable {
+	cursor: context-menu !important;
+}
+
+.panel_body.subgroup>li.layerManager-entry {
+	padding: 0 1.8rem 0 1.8rem;
+	margin-left: 1.8rem;
+}
+
+.panel_body.subgroup.subgroupThirdLevel>li.layerManager-entry {
+	margin-left: 3.6rem !important;
+}
+
+.panel_body.subgroup>li.layerManager-header {
+	margin-left: 1.8rem;
+}
+
+.layerManager-entry::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*.layerManager-entry:nth-child(even) { background: #fff }
+.layerManager-entry:nth-child(odd) { background: #fafafa }*/
+
+
+.layerManager-entry.entryActive,
+.layerManager-entry:hover {
+	background: #F2F5F9;
+}
+
+
+
+.layerManager-entry>*,
+.layerManager-entry input {
+	align-items: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.layerManager-entry label,
+.layerManager-entry .active {
+	cursor: pointer;
+}
+
+.layerManager-entry input {
+	margin: 0 5px;
+}
+
+/* ** Start of the Styles for Input Range: ** */
+input[type=range] {
+	height: 20px;
+	-webkit-appearance: none;
+	/*margin: 10px 0;*/
+	margin: .5rem 0;
+	/*width: 100%;*/
+	width: 8.5rem;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	box-shadow: 0px 0px 0px #000000;
+	background: #C4C4C4;
+	border-radius: 5px;
+	border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 0px solid #000000;
+	height: 14px;
+	width: 14px;
+	border-radius: 50px;
+	background: #FFFFFF;
+	border: 3.5px solid #004494;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #C4C4C4;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	box-shadow: 0px 0px 0px #000000;
+	background: #C4C4C4;
+	border-radius: 5px;
+	border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 0px solid #000000;
+	height: 14px;
+	width: 14px;
+	border-radius: 50px;
+	background: #004494;
+	cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: #C4C4C4;
+	border: 0px solid #000000;
+	border-radius: 10px;
+	box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: #C4C4C4;
+	border: 0px solid #000000;
+	border-radius: 10px;
+	box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 0px 0px 0px #000000;
+	border: 0px solid #000000;
+	height: 14px;
+	width: 14px;
+	border-radius: 50px;
+	background: #004494;
+	cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: #C4C4C4;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: #C4C4C4;
+}
+
+/* ** End of the Styles for Input Range: ** */
+
+.-ms- .layerManager-entry input[type="range"] {
+	width: 9em;
+	padding: .5em 0 .25em;
+}
+
+#visibleLayersPanel .layerManager-entry .actions,
+#visibleLayersPanel .layerManager-entry .floatRight {
+	float: right;
+	/* position: relative;
+    right: 30px; */
+}
+
+#visibleLayersPanel .layerManager-entry .actions i.noFilterNoAnimationElem {
+	/* opacity instead of display to ensure alignment */
+	opacity: 0;
+	cursor: context-menu;
+}
+
+#visibleLayersPanel .layerManager-entry .actions i.zoomExtLayer.disabledLayerZoomExtent {
+	color: #aaaaaa !important;
+	cursor: context-menu;
+}
+
+#visibleLayersPanel .layerManager-entry .actions i.zoomExtLayer svg {
+	transform: rotate(45deg);
+}
+
+#visibleLayersPanel .layerManager-entry input.opacitySlider {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+#visibleLayersPanel .layerManager-entry.entryActive input[type="range"] {
+	background: #BFD0E4;
+}
+
+#visibleLayersPanel .layerManager-entry:hover input[type="range"] {
+	background: #F2F5F9;
+}
+
+.layerManager-entry .remove {
+	cursor: pointer;
+}
+
+.layerManager-entry .remove svg {
+	color: #f00;
+	vertical-align: middle;
+	font-size: 1.2em;
+	padding: 0 .4em;
+}
+
+.layerManager-entry .remove a:hover svg {
+	color: #f8b333;
+}
+
+.layerManager-placeHolder {
+	background-color: #000;
+	height: .2em;
+}
+
+.layerManager-entry.original {
+	background-color: #ccc;
+}
+
+/* Start - Radio button customized for Visible layers' panel */
+#visibleLayersPanel li.layerManager-entry {
+	position: relative;
+}
+
+#visibleLayersPanel .name {
+	align-items: center;
+	padding-left: 5px;
+	cursor: pointer;
+	width: 45%;
+}
+
+#visibleLayersPanel .layerManager-entry label.name {
+	/* max-width: 45%; */
+}
+
+#visibleLayersPanel .layerManager-entry input[type="radio"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+#visibleLayersPanel .radio-indicator {
+	position: absolute;
+	/* left: 15px; */
+	top: 11px;
+	width: 17px;
+	height: 17px;
+	background: #e6e6e6;
+
+	display: flex;
+	/* to center vertically the white circle in the blue one */
+	align-items: center;
+	/* to center vertically the white circle in the blue one */
+	justify-content: center;
+	/* to center horizontally the white circle in the blue one */
+}
+
+#visibleLayersPanel .layerManager-entry .radio-indicator {
+	border-radius: 50%;
+}
+
+#visibleLayersPanel li.layerManager-entry input[type="radio"]:checked~.radio-indicator {
+	background: #004494;
+}
+
+.radio-indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+#visibleLayersPanel .layerManager-entry .radio-indicator:after {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+#visibleLayersPanel .layerManager-entry input[type="radio"]:checked~.radio-indicator:after {
+	display: block;
+}
+
+/* End - Radio button customized for Visible layers' panel */
+
+/* Add layer: */
+#layerManagerAddExternalContainer {
+	display: none;
+}
+
+.layerManager-action-add {
+	padding-top: 1rem;
+	padding-right: 15px;
+	color: #004494;
+	border: none;
+	text-align: end;
+	outline: none;
+	font-size: 15px;
+}
+
+#layerManagerDeleteAllContainer ul {
+	display: flex;
+    justify-content: flex-end;
+}
+
+.layerManager-action-delete {
+	padding-top: 1rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #004494;
+	border: none;
+	text-align: end;
+	outline: none;
+	font-size: 15px;
+}
+
+.layerManager-action a,
+.layerManager-action-add a,
+.layerManager-action-delete > a {
+	color: #004494;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.layerManager-action-delete > a:hover {
+	text-decoration: none;
+}
+
+.layerManager-action a:hover,
+.layerManager-action-add a:hover .layerManager-action-delete > a:hover {
+	color: #002f67;
+	text-decoration: none;
+}
+
+.layerManager-action-delete > a:hover span {
+	text-decoration: underline;
+}
+
+li.layerManager-action-delete > a > i {
+	padding-right: 5px;
+}
+
+.layerManager-action-add a::before {
+	content: '\f067';
+	font-family: "Font Awesome 5 Free";
+	color: #004494;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+/* Change Basemap: */
+#changeBasemapContainer {
+	color: #004494;
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.3rem;
+	line-height: 21px;
+	padding: 1rem;
+	/* position: relative; */
+	margin-bottom: 1rem;
+	/* min-width: 49rem; */
+}
+
+#marineRegionsContainer {
+	color: #004494;
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	font-family: Arial;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.3rem;
+	line-height: 21px;
+	padding: 1rem 1rem 1rem 1rem;
+	/* margin-bottom: 10px; */
+	/* margin-top: 3rem; */
+	/* position: relative; */
+	/* top: 20rem; */
+	/* min-width: 49rem; */
+}
+
+div#changeBasemapContainer span,
+div#marineRegionsContainer span {
+	display: flex;
+	align-items: center;
+}
+
+div#changeBasemap {
+	margin-left: 1rem;
+	margin-right: .5rem;
+	width: 65%;
+}
+
+div#search-marine-regions {
+	margin-left: -0.8rem;
+	margin-right: .5rem;
+	width: 65%;
+}
+
+div#changeBasemap select {
+	border: 1px solid #ccc;
+	/* border-radius: .4rem; */
+	color: #004494;
+	cursor: pointer;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.3rem;
+	line-height: 2rem;
+
+	height: 3.8rem;
+	padding: 0 1rem;
+	width: 100%;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+div#changeBasemap select option {
+	color: #979797;
+}
+
+.select-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.select-wrapper::after {
+	content: '>';
+	font: 17px "Consolas", monospace;
+	color: #004494;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	right: 16px;
+	/*Adjust for position however you want*/
+	font-weight: bold;
+	top: 9px;
+	padding: 0 0 2px;
+	/*border-bottom: 1px solid #999;*/
+	/*left line */
+
+	position: absolute;
+	pointer-events: none;
+}
+
+.select-wrapper select {
+	display: block;
+	width: 100%;
+	height: 50px;
+	float: right;
+	padding: 0px 24px;
+	font-size: 16px;
+	line-height: 1.75;
+	color: #333;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+	-ms-word-break: normal;
+	word-break: normal;
+}
+
+/* Search layer catalogue: */
+#layerSearchContainer {
+	display: flex;
+	padding: 1.8rem 1.8rem;
+	position: relative;
+}
+
+#layerSearchContainer i {
+	position: absolute;
+	left: 30px;
+	top: 27px;
+	color: #ccc;
+	margin: unset;
+	z-index: 1;
+}
+
+input#searchInput {
+	padding: 1rem;
+	padding-left: 4rem;
+	width: 100%;
+	border: 2px solid #ECECEC;
+	font-family: Arial;
+	font-size: 13.333px;
+}
+
+#searchInput::placeholder {
+	color: #ccc;
+	font-weight: bold;
+}
+
+#searchInput::-webkit-search-cancel-button {
+	color: #004494;
+	background: #EBEBEB;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+i.fa.fa-search {
+	color: #A5A5A5;
+	font-size: 2rem;
+	margin: 0 0.9rem 0 0.9rem;
+}
+
+#searchInput:focus {
+	outline: none !important;
+	border: 2px solid #004494
+		/*#BFD0E4*/
+	;
+}
+
+#searchInput:focus::placeholder {
+	color: transparent;
+}
+
+/* Start - Change checkbox image to custom fontawesome eye icon */
+.checkbox {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+.checkbox:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	content: "\f070";
+	color: #004494;
+	text-align: center;
+	font-size: 1.3em;
+	padding-left: 0.5rem;
+}
+
+.layerManager-entry:hover .actions .checkbox::before {
+	color: #004494
+		/*#E3E3E3*/
+	;
+}
+
+#visibleLayersPanel input[type=checkbox]:checked+.checkbox:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	content: "\f06e";
+	color: #004494;
+	font-size: 1.3em;
+	background-size: contain;
+	padding-left: 0.5rem;
+}
+
+/* End - Change checkbox image to custom fontawesome eye icon */
+
+
+.layerFilterIcon {
+	color: #fff !important;
+	stroke: #004494;
+	stroke-width: 70px;
+}
+
+.layerFilterIcon.filterApplied {
+	color: #004494 !important;
+}
+
+
+/* Start - Styling the tab */
+div#layerAdministratorPanel div.tab {
+	display: flex;
+	justify-content: center;
+	background-color: #BFD0E4;
+	height: 50px;
+	/*padding: 1.5rem 1.5rem 0;*/
+
+	/*width: 53rem;*/
+	width: 100%;
+	/* min-width: 53rem; */
+
+}
+
+div#layerAdministratorPanel div.tab .tablinks {
+	color: rgba(0, 60, 136, 0.5);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+div#layerAdministratorPanel div.tab button.tablinks {
+	cursor: pointer;
+	background: #BFD0E4;
+}
+
+div#layerAdministratorPanel div.tab button.tablinks.active {
+	border-bottom: none;
+}
+
+#layerAdministratorPanel div.tab button {
+	align-items: center;
+	padding-bottom: 0rem;
+}
+
+#layerAdministratorPanel div.tab button {
+	padding: unset;
+	width: 100%;
+}
+
+#layerAdministratorPanel div.tab button.tablinks.active {
+	background: white;
+	/* border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem; */
+	color: #004494;
+}
+
+#layerCataloguePanel .layerManager-entry .actions {
+	/* locating the checkbox at the left side, before the layer name */
+	float: left;
+}
+
+/* Start - layerCataloguePanel checkbox as an ordinary checkbox */
+#layerCataloguePanel li.layerMager-entry div.actions {
+	position: relative;
+}
+
+#layerCataloguePanel input[type=checkbox] {
+	display: none;
+}
+
+#layerCataloguePanel .checkbox {
+	position: relative;
+}
+
+#layerCataloguePanel .checkbox::before,
+.downloads .checkbox::before {
+	content: "";
+	width: 10px;
+	height: 15px;
+	border: 2px solid #bebebe;
+	border-radius: 2px;
+	cursor: pointer;
+	top: 8px;
+	margin-right: 1rem;
+}
+
+#layerCataloguePanel .layerManager-entry:hover .actions .checkbox::before,
+.downloads .layerManager-entry:hover .actions .checkbox::before {
+	color: #004494;
+}
+
+#layerCataloguePanel input[type=checkbox]:checked+.checkbox::before,
+.downloads input[type=checkbox]:checked+.checkbox::before {
+	background-color: #004494;
+	border-color: #004494;
+}
+
+#layerCataloguePanel input[type=checkbox]:checked+.checkbox::after,
+.downloads input[type=checkbox]:checked+.checkbox::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f00c";
+	position: absolute;
+	font-size: 12px;
+	left: 5px;
+	top: 1.5px;
+	color: white;
+	cursor: pointer;
+}
+
+/* End - layerCataloguePanel checkbox as an ordinary checkbox */
+
+/* End - Styling the tab */

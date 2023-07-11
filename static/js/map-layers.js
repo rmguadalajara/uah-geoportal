@@ -10,6 +10,7 @@ const iconStyle = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/ante2.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -20,6 +21,7 @@ const iconStyleRural1 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icorural.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -30,6 +32,7 @@ const iconStyleRural2 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icorural6.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -40,6 +43,7 @@ const iconStyleUr1 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icour1.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -50,6 +54,7 @@ const iconStyleUr2 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icour2.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -60,6 +65,7 @@ const iconStyleUr3 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icour3.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -70,6 +76,7 @@ const iconStyleUr4 = new ol.style.Style({
     anchorXUnits: 'fraction',
     anchorYUnits: 'pixels',
     src: 'static/images/icoPoints/icour4.png',
+    crossOrigin: 'Anonymous',
   }),
 });
 
@@ -80,6 +87,7 @@ const StyleMalla = new ol.style.Style({
     width: 1,
     lineJoin: 'round',
     lineCap: 'round',
+    crossOrigin: 'Anonymous',
   })
 });
 
@@ -90,6 +98,7 @@ const StyleLimiteMunicipal = new ol.style.Style({
     width: 3,
     lineJoin: 'round',
     lineCap: 'round',
+    crossOrigin: 'Anonymous',
   })
 });
 
@@ -100,6 +109,7 @@ const StyleLimiteUrbano = new ol.style.Style({
     width: 3,
     lineJoin: 'round',
     lineCap: 'round',
+    crossOrigin: 'Anonymous',
   })
 });
 
@@ -114,6 +124,7 @@ export const antenas = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -129,6 +140,7 @@ export const limitmun = new ol.layer.Vector({
     format: new ol.format.KML({
       extractStyles: false,
     }),
+    crossOrigin: 'Anonymous',
   }),
   style: function (feature) {
     return StyleLimiteMunicipal;
@@ -143,6 +155,7 @@ export const limiturb = new ol.layer.Vector({
     format: new ol.format.KML({
       extractStyles: false,
     }),
+    crossOrigin: 'Anonymous',
   }),
   style: function (feature) {
     return StyleLimiteUrbano;
@@ -160,6 +173,7 @@ export const medrur1 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -178,6 +192,7 @@ export const medrur2 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -196,6 +211,7 @@ export const medrur3 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -232,6 +248,7 @@ export const medrur5 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -250,6 +267,7 @@ export const medrur6 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
   style: function (feature) {
@@ -268,6 +286,7 @@ export const medrur7 = new ol.layer.Vector({
       format: new ol.format.KML({
         extractStyles: false,
       }),
+      crossOrigin: 'Anonymous',
     }),
   }),
 });
@@ -282,6 +301,7 @@ export const malla = new ol.layer.Vector({
       extractStyles: false,
     }),
     visible: true,
+    crossOrigin: 'Anonymous',
   }),
   style: function (feature) {
     return StyleMalla;
@@ -291,11 +311,11 @@ export const malla = new ol.layer.Vector({
 //*Se declara fuente de imagen WMS para capa raster desde geoserver
 const wmsImageSource = new ol.source.ImageWMS({
   extent: [-13884991, 2870341, -7455066, 6338219],
-  url: 'http://localhost/geoserver/uah/wms',
-  params: { 'LAYERS': 'uah:int_conj2' },
+  url: 'http://localhost:8080/geoserver/uah/wms',
+  params: { 'LAYERS': 'uah:int_conj2', 'FORMAT':"image/png" },
   serverType: 'geoserver',
   ratio: 1,
-
+  crossOrigin: 'Anonymous',
   
 });
 
@@ -304,7 +324,7 @@ export const geoServerWMSImageLayers =
   new ol.layer.Image({
     title: 'Raster conjunto medidas 2',
     source: wmsImageSource,
-    crossOrigin: 'anonymous',
+    crossOrigin: 'Anonymous',
   });
 
 
@@ -314,23 +334,29 @@ export const map = new ol.Map({
   layers: [
     new ol.layer.Group({
       title: 'Base map',
+      projection: new ol.proj.Projection("EPSG:25830"),
       layers: [
         new ol.layer.Tile({
           title: "Open Street Map",
           visible: true,
-          source: new ol.source.OSM(),
+          source: new ol.source.OSM({
+            crossOrigin: 'anonymous',
+          }),
         }),
 
         new ol.layer.Tile({
           title: "PNOA",
           source: new ol.source.XYZ({
-            url: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/{z}/{x}/{-y}.jpeg'
+            url: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/{z}/{x}/{-y}.jpeg',
+            crossOrigin: 'anonymous',
           })
         }),
         new ol.layer.Tile({
           title: "Híbrido",
           source: new ol.source.XYZ({
-            url: 'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}'
+            url: 'http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}',
+            crossOrigin: 'anonymous',
+
           })
         }),
 
@@ -352,7 +378,7 @@ map.on('singleclick', function (evt) {
   const url = wmsImageSource.getFeatureInfoUrl(
     evt.coordinate,
     viewResolution,
-    'EPSG:3857',
+    'EPSG:25830',
     { 'INFO_FORMAT': 'text/html' }
   );
   if (url) {

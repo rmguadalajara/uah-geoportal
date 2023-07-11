@@ -1515,6 +1515,9 @@ body > .ol-ext-dialog > form {
 .ol-layerswitcher.ol-layer-shop .layerup:after {
   content: unset;
 }
+.ol-layerswitcher .layer-header-button{
+  width: 50%;
+}
 
 .ol-control.ol-layer-shop .ol-title-bar {
   background-color: rgba(255,255,255,.5);
@@ -1630,6 +1633,7 @@ body > .ol-ext-dialog > form {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  width: 31em;
 }
 .ol-control.ol-layerswitcher .ol-switchertopdiv,
 .ol-control.ol-layerswitcher .ol-switcherbottomdiv {
@@ -1647,7 +1651,7 @@ body > .ol-ext-dialog > form {
 .ol-control.ol-layerswitcher .ol-switchertopdiv,
 .ol-control.ol-layerswitcher .ol-switcherbottomdiv {
   position: absolute;
-  top:0;
+  top: 57px;
   left:0;
   right:0;
   height: 45px;
@@ -1700,7 +1704,7 @@ body > .ol-ext-dialog > form {
   border-radius: 0 0 2px 2px;
   clear: both;
   display: block; /* display:block to show panel on over */
-  padding: 0.5em 2em 0;
+  padding: 3.5em 2em 0;
 }
 
 .ol-layerswitcher .panel {
@@ -1788,7 +1792,7 @@ body > .ol-ext-dialog > form {
 .ol-layerswitcher .panel li label {
   display: inline-block;
   height: 1.4em;
-  max-width: 12em;
+  max-width: 20em;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2059,19 +2063,16 @@ body > .ol-ext-dialog > form {
 
 .ol-layerswitcher .layerswitcher-opacity {
   position:relative;
-  border: 1px solid #369;
   height: 3px;
-  width: 120px;
+  width: 300px;
   margin:5px 1em 10px 7px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
-  background: #69c;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0,60,136,0)), to(rgba(0,60,136,0.6)));
   background: linear-gradient(to right, rgba(0,60,136,0), rgba(0,60,136,0.6));
   cursor: pointer;
-  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-          box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
 }
 
 .ol-layerswitcher .layerswitcher-opacity .layerswitcher-opacity-cursor,
@@ -4564,10 +4565,7 @@ ul.ol-legend li div {
   display: inline-block;
 }
 
-.ol-control.ol-wmscapabilities {
-  top: 3em;
-  left: 3em;
-}
+
 .ol-touch .ol-control.ol-wmscapabilities {
   right: 3em;
 }
@@ -6835,3 +6833,7 @@ ul.ol-legend li div {
   background-color: transparent;
   background-size: 4px;
 }
+.ol-control.ol-layerswitcher{
+  background : none;
+}
+

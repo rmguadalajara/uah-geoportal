@@ -43,7 +43,7 @@ const mouseStyle = new ol.style.Style({
 //SE declara elemento de posicion del raton
 const mousePos = new ol.control.MousePosition({
   coordinateFormat: ol.coordinate.createStringXY(4),
-  projection: 'EPSG:3857',
+  projection: 'EPSG:25830',
   // comment the following two lines to have the mouse position
   // be placed within the map.
   className: 'custom-mouse-position',
@@ -56,4 +56,39 @@ map.addControl(mousePos)
 const projectionSelect = document.getElementById('projection');
 projectionSelect.addEventListener('change', function (event) {
   mousePos.setProjection(event.target.value);
+});
+
+
+const positionButton = document.getElementById('position-button');
+positionButton.addEventListener('click', function (event) {
+  var container = document.getElementById('position-container');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
+});
+
+const printButton = document.getElementById('print-button');
+printButton.addEventListener('click', function (event) {
+  var container = document.getElementById('export_pdf');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
+});
+
+
+const valueButton = document.getElementById('value-button');
+valueButton.addEventListener('click', function (event) {
+  var container = document.getElementById('value_layer');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
 });

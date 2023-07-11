@@ -5917,9 +5917,16 @@ ol.control.LayerSwitcher = class olcontrolLayerSwitcher extends ol.control.Contr
       element.classList.add('ol-unselectable')
       element.classList.add('ol-control')
       element.classList.add(options.collapsed !== false ? 'ol-collapsed' : 'ol-forceopen')
+
+      var headerDiv = ol.ext.element.create('DIV', {
+        parent: element,
+        className: 'col-layer-switcher-header'
+      })
+
       this.button = ol.ext.element.create('BUTTON', {
         type: 'button',
-        parent: element
+        parent: headerDiv,
+        className: 'col-layer-switcher-header-button control-menu-button fa fa-database fa-4x'
       })
       this.button.addEventListener('touchstart', function (e) {
         element.classList.toggle('ol-forceopen')
@@ -5968,7 +5975,7 @@ ol.control.LayerSwitcher = class olcontrolLayerSwitcher extends ol.control.Contr
       className: 'panel',
     })
     this.panelContainer_ = ol.ext.element.create('DIV', {
-      className: 'panel-container',
+      className: 'panel-container overflow-hidden',
       html: this.panel_,
       parent: element
     })
