@@ -378,7 +378,7 @@ map.on('singleclick', function (evt) {
   const url = wmsImageSource.getFeatureInfoUrl(
     evt.coordinate,
     viewResolution,
-    'EPSG:25830',
+    'EPSG:3857',
     { 'INFO_FORMAT': 'text/html' }
   );
   if (url) {
