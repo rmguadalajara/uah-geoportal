@@ -53,7 +53,8 @@ exportButton.addEventListener(
       );
       mapContext.globalAlpha = 1;
       mapContext.setTransform(1, 0, 0, 1, 0, 0);
-      const pdf = new jspdf.jsPDF('landscape', undefined, format);
+      let pdf = new jspdf.jsPDF('landscape', undefined, format);
+      
       pdf.addImage(
         mapCanvas.toDataURL('image/png'),
         'PNG',
@@ -62,6 +63,7 @@ exportButton.addEventListener(
         dim[0],
         dim[1]
       );
+      pdf = addWaterMark(pdf);
       pdf.save('map.pdf');
       // Reset original map size
       map.setSize(size);
@@ -78,33 +80,15 @@ exportButton.addEventListener(
   },
   false
 );
-/* 
-const exportButton = document.getElementById('export-pdf');
 
-exportButton.addEventListener(
-    'click',
-    function () {
+function addWaterMark(doc) {
+  var totalPages = doc.internal.getNumberOfPages();
 
-        var doc = new jsPDF();
+  for (i = 1; i <= totalPages; i++) {
+    doc.setPage(i);
+    doc.setTextColor(255);
+    doc.text(10, doc.internal.pageSize.height - 10, 'RSG UAH ');
+  }
 
-        const source = $('#map')[0];
-
-        const specialElementHandlers = {
-            '#map': function (element, renderer) {
-                return true
-            }
-        };
-
-        doc.fromHTML(
-            source,
-            15,
-            15,
-            {
-                'width': 170,
-                'elementHandlers': specialElementHandlers
-            }
-        );
-        doc.save('Area 5 map - alterations.pdf')
-
-    }
-); */
+  return doc;
+}

@@ -17,7 +17,7 @@ if (plink.hasUrlParam('edugeo')) $('.options button').show();
 
 var cap = new ol.control.WMSCapabilities({ 
   target: $('.options').get(0),
-  cors: false,
+  cors: true,
   optional: 'token',
   services: {
     'UAH-geoserver': 'http://localhost:8080/geoserver/ows?',
