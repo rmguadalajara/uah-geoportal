@@ -4005,41 +4005,77 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 }
 
 
-.ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button{
+.ol-wmscapabilities.ol-button.ol-unselectable.ol-control button {
 	width: 55px !important;
 	height: 55px !important;
 }
 
-
-
-
-.ol-control.ol-wmscapabilities{
+.ol-control.ol-wmscapabilities {
 	top: 0.5em !important;
-	right: 25em !important;
+	right: 30em !important;
 
 }
-.overflow-hidden{
-	overflow: hidden;
+
+.ol-control.ol-layerswitcher {
+	right: 8em !important;
 }
-.position-button{
+
+.custom-ol-control {
+	background-color: transparent !important;
+}
+
+.tools-panel.custom-control-panel .panel-container,
+.contact-panel.custom-control-panel .panel-container,
+.info-panel.custom-control-panel .panel-container {
+	padding: 1em 1em !important;
+}
+
+.tools-panel.custom-control-panel .measure-tool {
+	height: 31em;
+}
+
+.overflow-hidden {
+	overflow-y: hidden;
+}
+
+.position-button {
 	position: absolute;
 	top: 0.5em;
-	right: 21em;;
+	right: 26em;
 }
-.print-button{
+
+.print-button {
 	position: absolute;
 	top: 0.5em;
-	right: 16em;;
+	right: 21em;
 }
 
-.value-button{
+.value-button {
 	position: absolute;
 	top: 0.5em;
-	right: 11em;;
+	right: 16em;
+}
+
+.tools-button {
+	position: absolute;
+	top: 0.5em;
+	right: 11em;
+}
+
+.contact-button {
+	position: absolute;
+	top: 0.5em;
+	right: 6em;
+}
+
+.info-button {
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
 }
 
 
-.hidden{
+.hidden {
 	display: none;
 }
 
@@ -4047,11 +4083,12 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 .tooltip {
 	position: relative;
 	display: inline-block;
-	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
+	border-bottom: 1px dotted black;
+	/* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
 	visibility: hidden;
 	width: 120px;
 	background-color: black;
@@ -4059,83 +4096,171 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	text-align: center;
 	padding: 5px 0;
 	border-radius: 6px;
-   
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
 	visibility: visible;
-  }
+}
 
-@media screen and (max-width: 550px) {
-  
-	.control-menu-button{
+.custom-control-panel,
+.ol-scale-line.ol-unselectable {
+	background-color: white !important;
+	transition: all 0.4s ease;
+	color: #4765a0;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.tools-panel .ol-control {
+	top: 4.5em !important;
+	right: 11em !important;
+	overflow: scroll !important;
+}
+
+.contact-panel .ol-control {
+	top: 4.5em !important;
+	right: 6em !important;
+}
+
+.info-panel .ol-control {
+	top: 4.5em !important;
+	right: 1em !important;
+	overflow: scroll !important;
+}
+
+
+.measure-input,
+.draw-input {
+	float: right;
+	display: inline !important;
+}
+
+.tool-input-button {
+	background: #0074d9;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	border-radius: 3px;
+}
+
+.tool-input-button:hover {
+	background: #4765a0;
+}
+
+.contact-panel i {
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+.close{
+	float: right;
+}
+
+@media screen and (max-width: 700px) {
+	.tituloInvestigacion {
+		font-size: 19px;
+	}
+}
+
+@media screen and (max-width: 620px) {
+
+	.control-menu-button {
 		width: 33px !important;
 		height: 33px !important;
 	}
-	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button {
+
+	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control button {
 		width: 33px !important;
 		height: 33px !important;
 	}
-	.position-button{
 
-		right: 14em;;
+	.position-button {
+		right: 22.5em;
 	}
-	.print-button{
 
-		right: 9em;
+	.print-button {
+		right: 19em;
 	}
-	
-	.value-button{
 
-		right: 4em;
+	.value-button {
+		right: 15.5em;
 	}
+
+	.tools-button {
+		right: 12em;
+	}
+
+	.contact-button {
+		right: 8.5em;
+	}
+
+	.info-button {
+		right: 5em;
+	}
+
 	.ol-control.ol-wmscapabilities {
-		right: 18em !important;
+		right: 25em !important;
 	}
-	.ol-control.ol-layerswitcher{
+
+	.ol-control.ol-layerswitcher {
 		width: 23em !important;
 	}
-	.tituloInvestigacion{
-		font-size: 1.3em;;
+
+	.tituloInvestigacion {
+		font-size: 1.3em;
 	}
-	
+
 }
 
 @media screen and (max-width: 450px) {
-  
-	.control-menu-button{
-		width: 22px !important;
-		height: 22px !important;
-	}
-	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control  button {
+
+	.control-menu-button {
 		width: 22px !important;
 		height: 22px !important;
 	}
 
-	.position-button{
-
-		right: 9em;;
+	.ol-wmscapabilities.ol-button.ol-unselectable.ol-control button {
+		width: 22px !important;
+		height: 22px !important;
 	}
-	.print-button{
 
-		right: 6em;
+	.position-button {
+		right: 14.5em;
 	}
-	
-	.value-button{
 
-		right: 3em;
+	.print-button {
+		right: 11.5em;
 	}
+
+	.value-button {
+		right: 8.5em;
+	}
+
+	.tools-button {
+		right: 5.5em;
+	}
+
+	.contact-button {
+		right: 2.5em;
+	}
+
+	.info-button {
+		right: 0.5em;
+	}
+
 	.ol-control.ol-wmscapabilities {
-		right: 11em !important;
+		right: 16.5em !important;
 	}
-	.ol-control.ol-layerswitcher{
+
+	.ol-control.ol-layerswitcher {
 		width: 13em !important;
 	}
-	.tituloInvestigacion{
+
+	.tituloInvestigacion {
 		font-size: 0.9em;
 	}
 }

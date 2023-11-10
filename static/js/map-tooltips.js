@@ -29,12 +29,12 @@ var selectMeasure = new ol.interaction.Select({
       attributes:
       {
         'Fecha': { title: 'Fecha' },
-        'Dirección': { title: 'Dirección' },
+        'Direccion': { title: 'Dirección' },
         'Latitud': { title: 'Latitud', after: 'º' },
         'Longitud': { title: 'Longitud', after: 'º' },
         'Valor': { title: 'Valor', after: ' V/m' },
         'Localizaci': { title: 'Localización' },
-        'Visión_di': { title: 'Visión directa' },
+        'Vision_di': { title: 'Visión directa' },
         'Tipo_de_Te': { title: 'Tipo de Terreno' },
         'Conjunto': { title: 'Conjunto' },
       }

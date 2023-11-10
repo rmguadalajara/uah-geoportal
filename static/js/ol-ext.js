@@ -1,3 +1,5 @@
+import { map } from "./map-layers.js";
+
 /**
  * ol-ext - A set of cool extensions for OpenLayers (ol) in node modules structure
  * @description ol3,openlayers,popup,menu,symbol,renderer,filter,canvas,interaction,split,statistic,charts,pie,LayerSwitcher,toolbar,animation
@@ -6732,7 +6734,10 @@ ol.control.LayerSwitcher = class olcontrolLayerSwitcher extends ol.control.Contr
     }
     // Add the layer list
     for (var i = layers.length - 1; i >= 0; i--) {
-      createLi.call(this, layers[i])
+      if(layers[i].values_.title !=  undefined){
+        createLi.call(this, layers[i])
+      }
+
     }
     this.viewChange()
     if (ul === this.panel_)
@@ -18423,11 +18428,62 @@ ol.control.WMSCapabilities = class olcontrolWMSCapabilities extends ol.control.B
    * @param {*} options
    */
   getLayerFromOptions(options) {
+
     options.layer.source = new ol.source.TileWMS(options.source)
     var layer = new ol.layer.Tile(options.layer)
+    options.data.keyword.forEach(function(element){
+      if(element === 'MedidaUAH'){
+        console.log(element)
+        var selectMeasure = new ol.interaction.Select({
+          hitTolerance: 5,
+          multi: true,
+          condition: ol.events.condition.singleClick,
+          layers: [layer],
+        });
+       map.addInteraction(selectMeasure); 
+        let popupMeasures = new ol.Overlay.PopupFeature({
+          popupClass: 'default anim',
+          select: selectMeasure,
+          canFix: true,
+          closeBox: true,
+          template: {
+            title:
+              function (f) {
+                return 'MEDIDA: ' + getPopupTittle(f);//aqui se va a meter el texto
+              },
+            attributes:
+            {
+              'Fecha': { title: 'Fecha' },
+              'Direccion': { title: 'Dirección' },
+              'Latitud': { title: 'Latitud', after: 'º' },
+              'Longitud': { title: 'Longitud', after: 'º' },
+              'Valor': { title: 'Valor', after: ' V/m' },
+              'Localizaci': { title: 'Localización' },
+              'Vision_di': { title: 'Visión directa' },
+              'Tipo_de_Te': { title: 'Tipo de Terreno' },
+              'Conjunto': { title: 'Conjunto' },
+            }
+          }
+        });
+        map.addOverlay(popupMeasures);
+      }
+    });
     delete options.layer.source
     return layer
   }
+  getPopupTittle(f) {
+
+    if (f.getProperties().features[0].values_.Descripcio != undefined) {
+      f.values_ = f.getProperties().features[0].values_;
+      return f.values_.Descripcio;
+    } else {
+      f.values_ = f.getProperties().features[0].values_;
+      return f.values_.Dirección
+    }
+  
+  
+  }
+  
   /**
    * Set the map instance the control is associated with
    * and add its controls associated to this map.

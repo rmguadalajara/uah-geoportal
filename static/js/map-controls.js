@@ -1,13 +1,4 @@
 import { map } from "./map-layers.js";
-
-//SE declara barra lateral
-var sidebar = L.control.sidebar("sidebar", {
-  position: 'right'
-});
-
-//Se añade barra lateral al mapa
-sidebar.addTo(map);
-
  
 //SE declara linea de escala
 const scale = new ol.control.ScaleLine({
@@ -40,7 +31,7 @@ const mouseStyle = new ol.style.Style({
 
 });
 
-//SE declara elemento de posicion del raton
+ //SE declara elemento de posicion del raton
 const mousePos = new ol.control.MousePosition({
   coordinateFormat: ol.coordinate.createStringXY(4),
   projection: 'EPSG:25830',
@@ -92,3 +83,63 @@ valueButton.addEventListener('click', function (event) {
   }
  
 });
+
+const toolsButton = document.getElementById('tools-button');
+toolsButton.addEventListener('click', function (event) {
+  var container = document.getElementById('tools-panel');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
+});
+
+const contactButton = document.getElementById('contact-button');
+contactButton.addEventListener('click', function (event) {
+  var container = document.getElementById('contact-panel');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
+});
+
+const infoButton = document.getElementById('info-button');
+infoButton.addEventListener('click', function (event) {
+  var container = document.getElementById('info-panel');
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+ 
+});
+
+const closeInfoButton = document.getElementById('close-info-button');
+closeInfoButton.addEventListener('click', function (event) {
+  closeElement(this);
+ 
+});
+
+const closeContactButton = document.getElementById('close-contact-button');
+closeContactButton.addEventListener('click', function (event) {
+  closeElement(this);
+ 
+});
+
+const closeToolsButton = document.getElementById('close-tools-button');
+closeToolsButton.addEventListener('click', function (event) {
+  closeElement(this);
+ 
+});
+
+function closeElement(element){
+  var container = element.parentNode.parentNode.parentNode;
+  if(container.className.includes("hidden")){
+    container.className = container.className.replace("hidden","");
+  }else{
+    container.className = container.className + ' hidden';
+  }
+}
