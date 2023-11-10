@@ -1,4 +1,4 @@
-import { map,medrur1, medrur2, medrur3, medrur4, medrur5, medrur6,antenas } from "./map-layers.js";
+import { map,medrur1, medrur2, medrur3, medrur4, medrur5, medrur6 } from "./map-layers.js";
 
 //Tooltips
 
@@ -9,20 +9,11 @@ var selectMeasure = new ol.interaction.Select({
     condition: ol.events.condition.singleClick,
     layers: [medrur1, medrur2, medrur3, medrur4, medrur5, medrur6],
   });
-  
-  // se crea la feature select para capas de tipo antena
-  var selectAntennas = new ol.interaction.Select({
-    hitTolerance: 5,
-    multi: true,
-    condition: ol.events.condition.singleClick,
-    layers: [antenas],
-  });
+
   
   //Se añade interacción en el mapa a la feature select para elementos de tipo medida
   map.addInteraction(selectMeasure);
-  
-  //Se añade interacción en el mapa a la feature select para elementos de tipo antena
-  map.addInteraction(selectAntennas);
+
   
   //Se configura e lcontrol de pop up para la select de tipo medida 
   let popupMeasures = new ol.Overlay.PopupFeature({
@@ -50,28 +41,6 @@ var selectMeasure = new ol.interaction.Select({
     }
   });
   map.addOverlay(popupMeasures);
-  
-  //Se configura e lcontrol de pop up para la select de tipo antena
-  let popupAntennas = new ol.Overlay.PopupFeature({
-    popupClass: 'default anim',
-    select: selectAntennas,
-    canFix: true,
-    closeBox: true,
-    template: {
-      title:
-        function (f) {
-          return 'ANTENA: ' + getPopupTittle(f);//aqui se va a meter el texto del titulo
-        },
-      attributes:
-      {
-        'Numero': { title: 'Numero' },
-        'UTM_X': { title: 'Latitud', after: 'º' },
-        'UTM_Y': { title: 'Longitud', after: 'º' },
-  
-      }
-    }
-  });
-  map.addOverlay(popupAntennas);
   
   function getPopupTittle(f) {
   

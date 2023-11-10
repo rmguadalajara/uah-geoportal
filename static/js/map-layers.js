@@ -3,17 +3,6 @@ const mindistanceInput = 20;
 
 
 
-//Se declara estilo de icono a incrustar en capa vectorial antenas
-const iconStyle = new ol.style.Style({
-  image: new ol.style.Icon({
-    anchor: [0.5, 30],
-    anchorXUnits: 'fraction',
-    anchorYUnits: 'pixels',
-    src: 'static/images/ante2.png',
-    crossOrigin: 'Anonymous',
-  }),
-});
-
 //Se declara estilo de icono a incrustar en capa vectorial conjunto de medidas 5
 const iconStyleRural1 = new ol.style.Style({
   image: new ol.style.Icon({
@@ -113,24 +102,7 @@ const StyleLimiteUrbano = new ol.style.Style({
   })
 });
 
-//se declara capa de anteenas a partir de fichero kml y estilo declarado anteriormente
-export const antenas = new ol.layer.Vector({
-  title: "Antenas",
-  source: new ol.source.Cluster({
-    distance: distanceInput,
-    minDistance: mindistanceInput,
-    source: new ol.source.Vector({
-      url: "static/capas/Antenas_Meco.kml",
-      format: new ol.format.KML({
-        extractStyles: false,
-      }),
-      crossOrigin: 'Anonymous',
-    }),
-  }),
-  style: function (feature) {
-    return iconStyle;
-  },
-});
+
 
 //se declara capa de limites municipales a partir de fichero kml y estilo declarado anteriormente
 export const limitmun = new ol.layer.Vector({
@@ -308,25 +280,6 @@ export const malla = new ol.layer.Vector({
   },
 });
 
-//*Se declara fuente de imagen WMS para capa raster desde geoserver
-const wmsImageSource = new ol.source.ImageWMS({
-  extent: [-13884991, 2870341, -7455066, 6338219],
-  url: 'http://localhost:8080/geoserver/uah/wms',
-  params: { 'LAYERS': 'uah:int_conj2', 'FORMAT':"image/png" },
-  serverType: 'geoserver',
-  ratio: 1,
-  crossOrigin: 'Anonymous',
-  
-});
-
-//Se declara capa raster de tipo imagen WMS con origen desde el source de geoserver
-export const geoServerWMSImageLayers =
-  new ol.layer.Image({
-    title: 'Raster conjunto medidas 2',
-    source: wmsImageSource,
-    crossOrigin: 'Anonymous',
-  });
-
 
 //SE declara mapa con tres Tiles, y se le añaden las capas declaradas anterioremente
 export const map = new ol.Map({
@@ -363,7 +316,7 @@ export const map = new ol.Map({
 
       ]
     }),
-    geoServerWMSImageLayers, antenas, limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
+      limitmun, limiturb, medrur1, medrur2, medrur3, medrur4, medrur5, medrur6, malla
   ],
   view: new ol.View({
     center: ol.proj.fromLonLat([-3.329501, 40.551952]),
@@ -372,33 +325,4 @@ export const map = new ol.Map({
   }),
 });
 
-map.on('singleclick', function (evt) {
-  document.getElementById('info').innerHTML = '';
-  const viewResolution = (map.getView().getResolution());
-  const url = wmsImageSource.getFeatureInfoUrl(
-    evt.coordinate,
-    viewResolution,
-    'EPSG:3857',
-    { 'INFO_FORMAT': 'text/html' }
-  );
-  if (url) {
-    fetch(url)
-      .then((response) => response.text())
-      .then((html) => {
-        if(!html.includes('Not Found')){
-            document.getElementById('info').innerHTML = html;
-        }
-        
-      });
-  }
-});
-
-map.on('pointermove', function (evt) {
-  if (evt.dragging) {
-    return;
-  }
-  const data = geoServerWMSImageLayers.getData(evt.pixel);
-  const hit = data && data[3] > 0; // transparent pixels have zero for data[3]
-  map.getTargetElement().style.cursor = hit ? 'pointer' : '';
-});
 
