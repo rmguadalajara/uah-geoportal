@@ -72,18 +72,6 @@ printButton.addEventListener('click', function (event) {
  
 });
 
-
-const valueButton = document.getElementById('value-button');
-valueButton.addEventListener('click', function (event) {
-  var container = document.getElementById('value_layer');
-  if(container.className.includes("hidden")){
-    container.className = container.className.replace("hidden","");
-  }else{
-    container.className = container.className + ' hidden';
-  }
- 
-});
-
 const toolsButton = document.getElementById('tools-button');
 toolsButton.addEventListener('click', function (event) {
   var container = document.getElementById('tools-panel');

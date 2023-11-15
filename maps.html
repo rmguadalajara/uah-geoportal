@@ -190,12 +190,6 @@
                                                                            
                                                                         </div>
                                                                     </div>
-                                                                    <div class="ol-control value-button custom-ol-control" title="Visualizar valor capa raster">
-                                                                        <button type="button" id="value-button" class="control-menu-button  fa fa-rebel fa-4x button"></button>
-                                                                        <div class="tooltip">
-                                                                            <span class="tooltiptext">Visualizar valor capa raster</span>
-                                                                        </div>
-                                                                    </div>
                                                                     <div class="ol-control tools-button custom-ol-control" title="Herramientas">
                                                                         <button type="button" id="tools-button" class="control-menu-button  fa fa-gears fa-4x button"></button>
                                                                         <div class="tooltip">
@@ -240,29 +234,28 @@
                                                                             </form>
                                                                         </div>
                                                                     </div>
-                                                                    <div id="value_layer" class="value_layer hidden custom-control-panel">
-                                                                        <label for="info">Valor capa</label>
-                                                                        <div id="info"> &nbsp;</div>
+                                                                    <div id="legend-container" class="legend-container hidden custom-control-panel">
+                                                                        <label for="info">Leyenda <i class="fa fa-minus-square"></i></label>
+                                                                    </div>
+                                                                    <div id="value_layer" class="hidden" >
+                                                                        <label for="info"></label>
                                                                     </div>
                                                                     <div id="export_pdf" class="export_pdf hidden custom-control-panel">
                                                                         <form class="form">
-                                                                            <label for="format">Page size </label>
+                                                                            <label for="format">Tamaño de página </label>
                                                                             <select id="format">
-                                                                            <option value="a0">A0 (slow)</option>
-                                                                            <option value="a1">A1</option>
-                                                                            <option value="a2">A2</option>
                                                                             <option value="a3">A3</option>
                                                                             <option value="a4" selected>A4</option>
                                                                             <option value="a5">A5 (fast)</option>
                                                                             </select>
-                                                                            <label for="resolution">Resolution </label>
+                                                                            <label for="resolution">Resolución </label>
                                                                             <select id="resolution">
                                                                             <option value="72">72 dpi (fast)</option>
                                                                             <option value="150">150 dpi</option>
                                                                             <option value="300">300 dpi (slow)</option>
                                                                             </select>
                                                                         </form>
-                                                                        <button id="export-pdf" >Export PDF</button>
+                                                                        <button id="export-pdf" >Exportar a  PDF</button>
                                                                     </div>
                                                                     <div id="tools-panel" class="tools-panel hidden custom-control-panel">
                                                                         <div class="ol-layerswitcher ol-unselectable ol-control ol-collapsed ol-forceopen" style="pointer-events: auto; height: auto;">                                                                          
@@ -503,7 +496,7 @@
 <script type="module" src="static/js/map-controls.js"></script>
 <script type="module" src="static/js/map-measures.js"></script>
 <script type="module" src="static/js/map-drawing.js"></script>
-<script type="module" src="static/js/map-tooltips.js"></script>
+<!-- <script type="module" src="static/js/map-tooltips.js"></script> -->
 <script type="module" src="static/js/map-wms-control.js"></script>
 <script type="module" src="static/js/map-pdf.js"></script>
 
