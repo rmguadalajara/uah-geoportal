@@ -4203,73 +4203,16 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 }
 
 
-#legend-container-info {
-	padding: 10px;
-}
-
-#legend-container label {
-	padding: 10px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-
-.legend-tab {
-	cursor: pointer;
-	/*transition: color 0.5s ease; /* Añade un efecto de desvanecimiento al cambiar el color */
-}
-
-.legend-tab div:hover {
-	background-color: #003da7;
-	/* Reemplaza #desiredColor con el color que quieras */
-	color: white;
-}
-
-.legend-container img {
-	/*max-width: 120px;*/
-	width: fit-content;
-	padding: 10px;
-}
-
-.legend-container i {
-	float: right;
-	cursor: pointer;
-	display: flex;
-	align-items: end;
-	margin-left: 10px;
-}
-
-#legend-container {
-	display: flex;
-	/* Alinea las pestañas horizontalmente */
-	flex-direction: column;
-	/* Alinea las pestañas verticalmente */
-	overflow: auto;
-	/* Añade barras de desplazamiento si es necesario */
-	max-height: 600px;
-	position: absolute;
-	left: 25px;
-	bottom: 70px;
-	padding: 10px;
-	border-radius: 4px;
-	min-width: 120px;
-}
-
-#legend-container>div {
-	padding: 10px;
-	/* Añade un poco de espacio alrededor de las leyendas */
-	border: 1px solid #ccc;
-	/* Añade un borde alrededor de las leyendas */
-}
-
-#legend-container>div.active {
-	display: block;
-	/* Muestra la leyenda activa */
-}
-
 .custom-mouse-position {
 	background-color: rgba(200, 200, 200, 0.1);
+}
+.ol-control.ol-legend{
+	top: 2.5em !important;
+	left: 3em !important;
+}
+.ol-control.ol-legend.ol-collapsed{
+	height: 1.5em !important;
+	width: 1.5em !important;
 }
 
 @media screen and (max-width: 700px) {

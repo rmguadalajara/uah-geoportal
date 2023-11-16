@@ -16,6 +16,12 @@ const services = {
   'GEBCO': 'https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv',
 };
 
+// Función que oculta el tooltip
+function clearValueLayer(){
+  var tooltipContainer = document.getElementById('value_layer');
+  tooltipContainer.innerHTML = '';
+  tooltipContainer.classList.add('hidden');
+}
 // Función que devuelve el nombre del servicio WMS a partir de su URL
 function getServiceName(url) {
   let serviceName;
@@ -27,12 +33,24 @@ function getServiceName(url) {
   }
   return serviceName;
 }
-
-// Añade un control de cambio de capas al objeto 'map'
-map.addControl(new ol.control.LayerSwitcher({
+//Se añade el layerSwitcher
+var layerSwitcher = new ol.control.LayerSwitcher({
   trash: true,
   extent: true,
-}));
+})
+// Añade un control de cambio de capas al objeto 'map'
+map.addControl(layerSwitcher);
+
+
+// Define a new legend
+var legend = new ol.legend.Legend({
+  title: 'Legend',
+  margin: 5
+});
+var legendCtrl = new ol.control.Legend({
+  legend: legend
+});
+map.addControl(legendCtrl);
 
 // Crea un objeto 'Permalink' para guardar la posición del mapa en la URL
 var plink = new ol.control.Permalink({ visible: false, localStorage: 'position' });
@@ -50,8 +68,13 @@ var cap = new ol.control.WMSCapabilities({
   cors: true,
   optional: 'token',
   services: services,
-  trace: true
+  trace: false,
+  placeholder: 'URL del servicio WMS...',
+  searchLabel: 'Buscar',
+  loadLabel: 'Cargar',
+  title: 'Cargar capas de un servicio WMS'
 });
+
 map.addControl(cap);
 
 // Añade un evento 'load' al objeto 'cap' para cargar la capa seleccionada
@@ -61,57 +84,17 @@ cap.on('load', function (e) {
   var layerName = e.options.source.params.LAYERS;
   var legendUrl = e.options.data.legend
 
-  // Crea un elemento de imagen para la leyenda de la capa
-  var legendImg = document.createElement('img');
-  legendImg.classList.add = 'legend-img';
-  legendImg.src = legendUrl;
+  // New legend associated with a layer
+  var layerLegend = new ol.legend.Legend({
+    layer: layer
+  })
 
+  layerLegend.addItem(new ol.legend.Image({
+    title: layerName,
+    src: legendUrl
+  }))
 
-  hideAllLegends();
-
-
-  // Crea un elemento div para la pestaña de la leyenda de la capa
-  var tab = document.createElement('div');
-  tab.classList.add('legend-tab');
-  tab.classList.add(layerName.split(':')[1]);
-  var labelContainer = document.createElement('div');
-  var label = document.createElement('label');
-  labelContainer.appendChild(label);
-
-  if (layerName.split(':').length > 1) {
-    label.textContent = layerName.split(':')[1];
-  } else {
-    label.textContent = layerName;
-  }
-  tab.appendChild(labelContainer);
-  const legendTabs = document.querySelectorAll('.legend-tab');
-  legendTabs.forEach(tab => {
-    tab.classList.remove('active');
-  });
-  tab.classList.add('active');
-  tab.display = 'block';
-
-  // Agrega un evento de clic a la pestaña para mostrar y ocultar la leyenda
-  label.addEventListener('click', function () {
-    // Oculta todas las leyendas de capas
-    hideAllLegends();
-    const legendTabs = document.querySelectorAll('.legend-tab');
-    legendTabs.forEach(tab => {
-      tab.classList.remove('active');
-    });
-    tab.classList.add('active');
-    var display = legendImg.style.display;
-    legendImg.style.display = display === 'none' ? 'block' : 'none';
-  });
-
-
-  // Agrega la pestaña y la imagen de la leyenda al elemento HTML
-  var legendContainer = document.getElementById('legend-container');
-  legendContainer.appendChild(tab);
-  tab.appendChild(legendImg);
-
-  // Muestra el contenedor de la leyenda de la capa
-  document.getElementById('legend-container').classList.remove('hidden');
+  legend.addItem(layerLegend)
 
   // Guarda la URL y el nombre de la capa en el objeto 'plink'
   plink.setUrlParam('url', url);
@@ -134,8 +117,9 @@ cap.on('load', function (e) {
   }
   group.getLayers().push(layer);
 
-  // Agrega un evento de clic a la capa 'UAH-geoserver'
+  // Agrega un evento de clic a la capa que proviene de  'UAH-geoserver'
   if (serviceName.toLowerCase().includes('uah')) {
+   
     map.on('click', function (evt) {
       var viewResolution = map.getView().getResolution();
       var projectionCode = source.getProjection().getCode();
@@ -155,7 +139,7 @@ cap.on('load', function (e) {
             var tooltipContainer = document.getElementById('value_layer');
             // Añade un botón de cierre al tooltip
             if (!tooltipContainer.innerHTML.includes('close')) {
-              tooltipContainer.innerHTML += '<span class="" onclick="this.parentElement.classList.add(\'hidden\')"><i class="fa fa-close close"></i></span>';
+              tooltipContainer.innerHTML += '<span id="tootipCloseButton" ><i class="fa fa-close close"></i></span>';
             }
             if (json && json.features && json.features.length > 0) {
               var properties = json.features[0].properties;
@@ -181,6 +165,9 @@ cap.on('load', function (e) {
               tooltipContainer.style.top = pixel[1] + 'px';
 
               tooltipContainer.classList.remove('hidden');
+              tootipCloseButton.addEventListener('click', function () {
+                clearValueLayer();
+              });
             } else {
               tooltipContainer.classList.add('hidden');
             }
@@ -191,39 +178,9 @@ cap.on('load', function (e) {
 
 });
 
-// Oculta el tooltip al mover el mapa
-map.on('dbclick', function () {
-  var tooltip = document.getElementById('info');
-  tooltip.style.display = 'none';
-});
-
 // Carga la capa seleccionada si la URL contiene los parámetros 'url' y 'layer'
 var url = plink.getUrlParam('url');
 var layerName = plink.getUrlParam('layer');
 if (url) {
   cap.loadLayer(url, layerName);
-}
-
-// Agrega un evento de clic al icono de la leyenda para mostrar y ocultar todas las leyendas de capas
-const legendContainer = document.querySelector('#legend-container');
-const legendIcon = legendContainer.querySelector('i');
-legendIcon.addEventListener('click', () => {
-  const legendItems = legendContainer.querySelectorAll('img, div');
-  legendItems.forEach(item => {
-    item.classList.toggle('hidden');
-  });
-});
-
-
-
-function hideAllLegends() {
-  var legendImgs = document.querySelectorAll('#legend-container img');
-  legendImgs.forEach(function (img) {
-    img.style.display = 'none';
-  });
-}
-
-function closeTooltip() {
-  this.parentElement.classList.add('hidden');
-  document.getElementById('value_layer');
 }
