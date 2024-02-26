@@ -15,7 +15,7 @@ const drawingVectorLayer = new ol.layer.Vector({
     'circle-fill-color': '#ffcc33',
   },
 });
-
+drawingVectorLayer.setZIndex(1000);
 map.addLayer(drawingVectorLayer);
 
 // Limit multi-world panning to one world east and west of the real world.
