@@ -200,6 +200,8 @@ const vector = new ol.layer.Vector({
   },
 });
 
+vector.setZIndex(999);
+
 map.addLayer(vector);
 
 map.addInteraction(modify);

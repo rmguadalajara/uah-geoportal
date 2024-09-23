@@ -3,10 +3,6 @@ import { map } from "./map-layers.js";
 const exportButton = document.getElementById('export-pdf');
 
 const dims = {
-    a0: [1189, 841],
-    a1: [841, 594],
-    a2: [594, 420],
-    a3: [420, 297],
     a4: [297, 210],
     a5: [210, 148],
   };
@@ -80,14 +76,13 @@ exportButton.addEventListener(
   },
   false
 );
-
 function addWaterMark(doc) {
   var totalPages = doc.internal.getNumberOfPages();
 
   for (i = 1; i <= totalPages; i++) {
     doc.setPage(i);
     doc.setTextColor(255);
-    doc.text(10, doc.internal.pageSize.height - 10, 'RSG UAH ');
+    doc.addImage('static/images/rsg.png', 'PNG', 10, doc.internal.pageSize.height - 20, 10, 10); // add image
   }
 
   return doc;
