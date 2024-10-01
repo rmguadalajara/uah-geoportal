@@ -4062,7 +4062,7 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 .info-button {
 	position: absolute;
 	top: 0.5em;
-	right: 16em;
+	right: 1em;
 }
 
 
@@ -4119,7 +4119,7 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 
 .info-panel .ol-control {
 	top: 4.5em !important;
-	right: 16em !important;
+	right: 1em !important;
 	overflow: scroll !important;
 }
 
@@ -4162,8 +4162,34 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	height: auto;
 	max-height: 500px;
 	/* Ajusta este valor a tus necesidades */
+	bottom: 4em;
+}
+#value_layer_title{
+	background: #4765a0;
+	color: white;
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+}
+/* Opción 2: Aplicar padding a td y th */
+.value_layer_table td, .value_layer_table th {
+    padding: 5px;
 }
 
+.value_layer_table_head {
+	background: #4765a0;
+    color: white;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* Estilos alternos para filas de .value_layer_table */
+.value_layer_table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Gris claro para filas impares */
+}
+
+.value_layer_table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Blanco para filas pares */
+}
 .medida-tooltip {
 	border-collapse: collapse;
 	width: 90%;
@@ -4214,6 +4240,8 @@ body.dark .tp-banner-container .btn-u.btn-brd.btn-u-light {
 	height: 1.5em !important;
 	width: 1.5em !important;
 }
+
+
 
 @media screen and (max-width: 700px) {
 	.tituloInvestigacion {

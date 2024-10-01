@@ -136,6 +136,14 @@ closeToolsButton.addEventListener('click', function (event) {
   closeElement(this);
  
 });
+const closeValueButton = document.getElementById('close-value-button');
+closeValueButton.addEventListener('click', function (event) {
+  var container = document.getElementById('value_layer');
+  container.className = container.className + ' hidden';
+  destroyLayerLegendPanel();
+ 
+});
+
 
 function closeElement(element){
   var container = element.parentNode.parentNode.parentNode;
