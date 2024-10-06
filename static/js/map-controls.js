@@ -1,5 +1,5 @@
 import { map,createLayerLeyendPanel, destroyLayerLegendPanel } from "./map-layers.js";
-
+import {eraseFeatures} from "./map-drawings";
 //SE declara linea de escala
 const scale = new ol.control.ScaleLine({
 });
@@ -93,6 +93,7 @@ toolsButton.addEventListener('click', function (event) {
     container.className = container.className.replace("hidden","");
   }else{
     container.className = container.className + ' hidden';
+    eraseFeatures;
   }
  
 });

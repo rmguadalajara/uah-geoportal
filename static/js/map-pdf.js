@@ -1,6 +1,6 @@
 import { map } from "./map-layers.js";
 
-const exportButton = document.getElementById('export-pdf');
+const exportButton = document.getElementById('export-pdf-button');
 
 const dims = {
     a4: [297, 210],
